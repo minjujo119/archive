@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스피드미터 모션테스트</title>
+</head>
+<body>
+
+<div class="wrap">
+  <em class="tit">현재 나의 이용량</em>
+  <div class="speedometer">
+    <div class="box_section">
+      <div class="sec inactive" data-id="sec1">
+        <span class="txt txt_ticket">3개</span>
+        <span class="txt txt_point">0P</span>
+      </div>
+      <div class="sec inactive" data-id="sec2">
+        <span class="txt txt_ticket">4개</span>
+        <span class="txt txt_point">200P</span>
+      </div>
+      <div class="sec inactive" data-id="sec3">
+        <span class="txt txt_ticket">4개</span>
+        <span class="txt txt_point">500P</span>
+      </div>
+      <div class="sec inactive" data-id="sec4">
+        <span class="txt txt_ticket">6개</span>
+        <span class="txt txt_point">2,000P</span>
+      </div>
+      <div class="sec inactive" data-id="sec5">
+        <span class="txt txt_ticket">6개</span>
+        <span class="txt txt_point">5,000P</span>
+      </div>
+      <div class="sec inactive" data-id="sec6">
+        <span class="txt txt_ticket">8개</span>
+        <span class="txt txt_point">7,000P</span>
+      </div>
+      <div class="sec inactive" data-id="sec7">
+        <span class="txt txt_ticket">8개</span>
+        <span class="txt txt_point">15,000P</span>
+      </div>
+      <div class="sec inactive" data-id="sec8">
+        <span class="txt txt_ticket">10개</span>
+        <span class="txt txt_point">30,000P</span>
+      </div>
+      <div class="sec inactive" data-id="sec9">
+        <span class="txt txt_ticket">10개</span>
+        <span class="txt txt_point">50,000P</span>
+      </div>
+      <div class="sec inactive" data-id="sec10">
+        <span class="txt txt_ticket">12개</span>
+        <span class="txt txt_point">80,000P</span>
+      </div>
+      <div class="sec inactive" data-id="sec11">
+        <span class="txt txt_ticket">14개</span>
+        <span class="txt txt_point">100,000P</span>
+      </div>
+      <div class="sec inactive" data-id="sec12">
+        <span class="txt txt_ticket">15개</span>
+        <span class="txt txt_point">120,000P</span>
+      </div>
+    </div>
+
+    <span class="needle"></span>
+
+    <div class="box_summary">
+      <span class="tit">누적 포인트</span>
+      <span class="num">999,999</span>
+      <span class="unit">P</span>
+    </div>    
+  </div>
+</div>
+
+<div class="btn_wrap">
+  <button type="button" class="btn">1구간</button>
+  <button type="button" class="btn">2구간</button>
+  <button type="button" class="btn">3구간</button>
+  <button type="button" class="btn">4구간</button>
+  <button type="button" class="btn">5구간</button>
+  <button type="button" class="btn">6구간</button>
+  <button type="button" class="btn">7구간</button>
+  <button type="button" class="btn">8구간</button>
+  <button type="button" class="btn">9구간</button>
+  <button type="button" class="btn">10구간</button>
+  <button type="button" class="btn">11구간</button>
+  <button type="button" class="btn">12구간</button>  
+</div>
+
+
+<style>
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
+/* font-family:'',sans-serif; */
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,input,select,textarea,button,article,aside,dialog,header,section,footer,nav,figure,main{margin:0;padding:0}
+article,aside,dialog,header,section,footer,nav,figure,main{display:block} /* for ie8 */
+html,body{-webkit-text-size-adjust:none;-ms-text-size-adjust:none} /* for mobile */
+body,input,select,textarea,button,a{word-break:keep-all;word-wrap:break-word;font-family:'Pretendard Variable',-apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo',sans-serif} /* 시스템폰트 사용 */
+ul,ol{list-style:none}
+table{table-layout:fixed;border-spacing:0}
+input,button,select{-webkit-appearance:none;appearance:none;border:0;border-radius:0;background-color:transparent}
+input::-ms-clear{display:none} /* input내 clear 버튼 제거 : IE10+ */
+img,fieldset{border:0;vertical-align:top}
+em,address{font-style:normal}
+a{color:#333;text-decoration:none;cursor:txt txt_pointer}
+button{cursor:txt txt_pointer;white-space:nowrap}
+button::-moz-focus-inner{padding:0;border:0}
+::-webkit-file-upload-button{cursor:txt txt_pointer}
+hr{display:none}
+.blind,caption span,legend{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;clip:rect(0,0,0,0)}
+
+/*layout*/
+body{padding:20px;}
+.usage_box{width:592px;height:354px;padding:32px 18px;background-color:#1a1b1f;border-radius:20px;box-sizing:border-box;}
+.usage_box .tit{font-size:20px;color:#fff;font-weight:700;}
+.speedometer{overflow:hidden;position:relative;width:556px;height:278px}
+.speedometer .box_section{overflow:hidden;position:relative;height:100%;border-radius:278px 278px 0 0;box-sizing:border-box;}
+.speedometer .box_section:before{position:absolute;bottom:0;left:40px;z-index:10;width:476px;height:238px;background-color:transparent;opacity:0.2;border:5px solid #000;border-bottom:none;border-radius:278px 278px 0 0;content:'';box-sizing:border-box;}
+.speedometer .box_section:after{position:absolute;bottom:0;left:0;width:556px;height:278px;background-color:transparent;border:8px solid #4a6cf5;border-bottom:none;border-radius:278px 278px 0 0;content:'';box-sizing:border-box;}
+.speedometer .sec{position:absolute;width:100%;height:100%;top:0;left:0;border-width:40px;border-bottom-width:2px;border-color:#000;border-style:solid;border-radius:278px 278px 0 0;background-color:currentColor;transform-origin:center bottom;box-sizing:border-box;transition-property:color,currentColor;}
+.speedometer .sec:first-child{border-bottom-width:0}
+.speedometer .sec.inactive{background-color:#6a6a6a !important}
+.speedometer .sec.inactive .txt_point{color:#505050 !important}
+.speedometer .sec.inactive .txt_ticket{color:#505050 !important}
+.speedometer .sec[data-id=sec1] {color:#fbea44;transform:rotate(0deg);transition-delay:0.0s}
+.speedometer .sec[data-id=sec2] {color:#d6c738;transform:rotate(15deg);transition-delay:0.1s}
+.speedometer .sec[data-id=sec3] {color:#d6c738;transform:rotate(30deg);transition-delay:0.2s}
+.speedometer .sec[data-id=sec4] {color:#adc744;transform:rotate(45deg);transition-delay:0.3s}
+.speedometer .sec[data-id=sec5] {color:#adc744;transform:rotate(60deg);transition-delay:0.4s}
+.speedometer .sec[data-id=sec6] {color:#54bf4a;transform:rotate(75deg);transition-delay:0.5s}
+.speedometer .sec[data-id=sec7] {color:#54bf4a;transform:rotate(90deg);transition-delay:0.6s}
+.speedometer .sec[data-id=sec8] {color:#3c83ef;transform:rotate(105deg);transition-delay:0.7s}
+.speedometer .sec[data-id=sec9] {color:#3c83ef;transform:rotate(120deg);transition-delay:0.8s}
+.speedometer .sec[data-id=sec10]{color:#4095f9;transform:rotate(135deg);transition-delay:0.9s}
+.speedometer .sec[data-id=sec11]{color:#b274f2;transform:rotate(150deg);transition-delay:1.0s}
+.speedometer .sec[data-id=sec12]{color:#7f1ee0;transform:rotate(165deg);transition-delay:1.1s}
+.speedometer .sec .txt{position:absolute;font-weight:700;text-align:center;font-size:12px;transition-delay:inherit;}
+.speedometer .sec .txt_ticket{bottom:26px;left:-24px;color:currentColor;}
+.speedometer .sec .txt_point{position:absolute;bottom:19px;left:10px;color:#000;}
+.speedometer .sec[data-id=sec1] .txt {transform:rotate(-0deg)}
+.speedometer .sec[data-id=sec2] .txt {transform:rotate(-15deg)}
+.speedometer .sec[data-id=sec3] .txt {transform:rotate(-30deg)}
+.speedometer .sec[data-id=sec4] .txt {transform:rotate(-45deg)}
+.speedometer .sec[data-id=sec5] .txt {transform:rotate(-60deg)}
+.speedometer .sec[data-id=sec6] .txt {transform:rotate(-75deg)}
+.speedometer .sec[data-id=sec7] .txt {transform:rotate(-90deg)}
+.speedometer .sec[data-id=sec8] .txt {transform:rotate(-105deg)}
+.speedometer .sec[data-id=sec9] .txt {transform:rotate(-120deg)}
+.speedometer .sec[data-id=sec10] .txt{transform:rotate(-135deg)}
+.speedometer .sec[data-id=sec11] .txt{transform:rotate(-150deg)}
+.speedometer .sec[data-id=sec12] .txt{transform:rotate(-165deg)}
+.speedometer .box_summary{position:absolute;bottom:-90px;left:50%;width:190px;height:190px;color:#fff;text-align:center;transform:translateX(-50%);border-radius:100%;background-color:#1a1b1f}
+.speedometer .box_summary .tit{display:block;margin-top:40px;font-size:18px;font-weight:400}
+.speedometer .box_summary .num{font-size:24px;color:#f07322;font-weight:700}
+.speedometer .needle{position:absolute;bottom:-29px;right:calc(50% - 30px);width:161px;height:60px;background-image:url(./img/needle2.png);transform-origin:calc(100% - 30px) 50%;transform:rotate(0);transition-property:transform;transition-duration:1.2s;transition-timing-function:linear;}
+
+.btn_wrap{margin-top:30px;}
+.btn{width:60px;height:30px;font-size:14px;margin-top:2px;border:1px solid #333;cursor:pointer}
+.btn:hover{background-color:#eee;}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js"></script>
+<script>
+
+var sections = document.querySelectorAll('.sec'),
+    btn = document.querySelector('.btn')
+    needle = document.querySelector('.needle'),
+
+
+// 버튼 클릭 시
+$('.btn').on("click",function(){
+  var btnIndex = $(this).index();
+  gaugeMotion(btnIndex);
+})
+
+
+function gaugeMotion(num){
+
+  // 바늘 모션
+  needle.style.transitionDuration = String(0.1*num) +'s'
+  needle.style.transform = 'rotate('+ String(num*15 + 7.5) + 'deg)';
+
+  // 구간별 컬러 변경
+  Array.prototype.forEach.call(sections,function(sec, secIndex){
+    if(secIndex <= num){
+      sec.classList.remove('inactive');
+    }else{
+      return;
+    };
+  })
+};
+
+
+
+
+// 회전하기
+
+</script>
+<!-- // case view / [D] 마크업 확인용, 개발 시 삭제 부탁드립니다. -->
+
+</body>
+</html>

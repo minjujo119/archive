@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+div {
+  margin: 0;
+  padding: 0;
+}
+.conic {
+  width: 500px;
+  height: 500px;
+  transform: rotate(-90deg);
+  border-radius: 50%;
+  background-image: conic-gradient(
+    maroon 0deg, maroon 15deg,
+    red 15deg, red 30deg, 
+    orange 30deg, orange 45deg, 
+    yellow 45deg, yellow 60deg, 
+    yellowgreen 60deg, yellowgreen 75deg,
+    green 75deg, green 90deg,
+    teal 90deg, teal 105deg,
+    aqua 105deg, aqua 120deg,
+    blue 120deg, blue 135deg,
+    navy 135deg, navy 150deg, 
+    purple 150deg, purple 165deg,
+    fuchsia 165deg, fuchsia 180deg,
+    black 180deg
+  );
+}
+
+.multiple {
+  position: relative;
+  overflow: hidden;
+  margin-top: 100px;
+  width: 500px;
+  height: 250px;
+}
+
+.multiple .item{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #000;
+  border-radius: 250px 250px 0 0;
+  box-sizing: border-box;
+  transform-origin: bottom;
+}
+
+
+.multiple .item:nth-child(2) {
+  transform: rotate(15deg);
+  background-color: maroon;
+}
+
+.multiple .item:nth-child(3) {
+  transform: rotate(30deg);
+  background-color: red;
+}
+
+.multiple .item:nth-child(4) {
+  transform: rotate(45deg);
+  background-color: orange;
+}
+
+.multiple .item:nth-child(5) {
+  transform: rotate(60deg);
+  background-color: orangered;
+}
+
+.multiple .item:nth-child(6) {
+  transform: rotate(75deg);
+  background-color: yellow;
+}
+
+.multiple .item:nth-child(7) {
+  transform: rotate(90deg);
+
+}
+
+.multiple .item:nth-child(8) {
+  transform: rotate(105deg);
+}
+
+.multiple .item:nth-child(9) {
+  transform: rotate(120deg);
+}
+
+.multiple .item:nth-child(10) {
+  transform: rotate(135deg);
+}
+
+.multiple .item:nth-child(11) {
+  transform: rotate(150deg);
+}
+
+.multiple .item:nth-child(12) {
+  transform: rotate(165deg);
+}
+
+.multiple .item .num {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.multiple .item:nth-child(2) .num{
+  transform: rotate(-15deg);
+}
+
+.multiple .item:nth-child(3) .num{
+  transform: rotate(-30deg);
+}
+
+.multiple .item:nth-child(4) .num{
+  transform: rotate(-45deg);
+}
+
+.multiple .item:nth-child(5) .num{
+  transform: rotate(-60deg);
+}
+
+.multiple .item:nth-child(6) .num{
+  transform: rotate(-75deg);
+}
+
+.multiple .item:nth-child(7) .num{
+  transform: rotate(-90deg);
+}
+
+.multiple .item:nth-child(8) .num{
+  transform: rotate(-105deg);
+}
+
+.multiple .item:nth-child(9) .num{
+  transform: rotate(-120deg);
+}
+
+.multiple .item:nth-child(10) .num{
+  transform: rotate(-135deg);
+}
+
+.multiple .item:nth-child(11) .num{
+  transform: rotate(-150deg);
+}
+
+.multiple .item:nth-child(12) .num{
+  transform: rotate(-165deg);
+}
+</style>  
+</head>
+<body>
+  <div class="conic"></div>
+  <div class="multiple">
+    <div class="item">
+      <span class="num">0P</span>
+    </div>
+    <div class="item">
+      <span class="num">200P</span>
+    </div>
+    <div class="item">
+      <span class="num">500P</span>
+    </div>
+    <div class="item">
+      <span class="num">2,000P</span>
+    </div>
+    <div class="item">
+      <span class="num">5,000P</span>
+    </div>
+    <div class="item">
+      <span class="num">7,000P</span>
+    </div>
+    <div class="item">
+      <span class="num">15,000P</span>
+    </div>
+    <div class="item">
+      <span class="num">30,000P</span>
+    </div>
+    <div class="item">
+      <span class="num">50,000P</span>
+    </div>
+    <div class="item">
+      <span class="num">80,000P</span>
+    </div>
+    <div class="item">
+      <span class="num">100,000P</span>
+    </div>
+    <div class="item">
+      <span class="num">120,000P</span>
+    </div>
+  </div>
+</body>
+</html>

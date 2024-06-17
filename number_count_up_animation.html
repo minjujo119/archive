@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스터디 : 자동으로 올라가는 숫자 카운터</title>
+</head>
+<body>
+
+  <h1 class="count"><span class="num">00</span>명</h1>
+  <button type="button">시작</button>
+</body>
+
+<style>
+body{text-align:center;}
+.count{font-size: 60px;}
+</style>
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+  let memberCountConTxt= 781003222;
+  countUp();
+  $('button').click(function(){countUp()});
+
+  function countUp() {
+    $({ val : 0 }).animate({ val : memberCountConTxt },
+    {duration: 1000,
+    easing: 'swing',
+    step: function(){let num = numberWithCommas(Math.floor(this.val));$(".num").text(num);},
+    complete: function(){let num = numberWithCommas(Math.floor(this.val));$(".num").text(num);},
+    });
+  };    
+  //3자리마다 , 찍기
+  function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+</script>
+
+
+</html>

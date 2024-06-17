@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지뢰찾기 게임</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="header">
+    <button type="button" class="btn-reset" aria-label="다시 시작하기"></button>
+    <div class="screen timer">00:00:00</div>
+  </header>
+  <main class="main">
+    <div class="cell-list"></div>
+    <div class="level-list">
+      <button type="button" id="level1" class="level-item">초급 (9x9)</button>
+      <button type="button" id="level2" class="level-item">중급 (12x12)</button>
+      <button type="button" id="level3" class="level-item">고급 (16x16)</button>
+    </div>
+    <div class="dimmed failed" style="display:none;">
+      <p class="title">you failed!</p>
+      <p class="title-sub">push the smile button to replay</p>
+    </div>
+    <div class="dimmed clear" style="display:none;">
+      <p class="title">congratulation!</p>
+      <p class="title-sub">push the smile button to replay</p>
+    </div>
+  </main>
+  <footer class="footer"></footer>
+</div>
+
+<!-- 테스트버튼 -->
+<button type="button" class="btn-test fail">TEST BUTTON</button>
+<button type="button" class="btn-test clear" style="top: 15%;">CLEAR BUTTON</button>
+<style>
+  .btn-test{position:fixed;top:10%;right:10%;width:100px;height:40px;background-color:#999;font-weight:bold;}
+</style>
+
+<!-- 자바스크립트 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/robcowie/jquery-stopwatch@master/jquery.stopwatch.js"></script> -->
+<script defer src="js/stopwatch.js"></script>
+<script defer src="js/game.js"></script>
+<script>
+
+  // 테스트버튼
+$('.btn-test.fail').on('click',function(){
+  $cellItems.forEach(cellItem => {
+    cellItem.classList.remove(statusFlag);
+    cellItem.checked = true;
+  });
+});
+
+$('.btn-test.clear').on('click',function(){
+  $cellItems.forEach(cellItem => {
+    if (cellItem.classList.contains(statusBomb) == false){
+      cellItem.click();
+    }
+  });
+});
+</script>
+</body>
+</html>

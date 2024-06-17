@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui, target-densitydpi=device-dpi, viewport-fit=cover">
+<title>한게임포커X더블에이포커 크로스 이벤트</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap" class="wrap">
+	<div class="bg"><img src="img/bg_main.png"></div>
+	<!-- container -->
+	<div class="container">
+		<div class="header">
+			<p class="blind">매일 매일 무료로 1조 토너먼트에 참여하자!</p>
+			<h1 class="blind">한게임포커 X 더블에이포커</h1>
+		</div>
+		<div class="contents">
+			<!-- 너~무 쉬운 이벤트 -->
+			<div class="reward_area">
+				<div class="tit"><h2 class="blind">너~무 쉬운 이벤트</h2></div>
+				<div class="reward">
+					<strong class="blind">출석하면 1000만 칩 지급!</strong>
+					<div class="btn_box">
+						<!-- [D] 활성화 : .counter 비활성화 : .counter.is_disabled -->
+						<!-- [D] 인원 수 미표기 시 display:none -->
+						<span class="counter" style="display:block;"><span class="txt_highlight">10,000</span>/10,000명</span>
+						<!-- [D] 보상받기 활성화 : .btn_reward / 보상받기 비활성화 : .btn_reward.is_disabled / 종료 : .btn_reward.is_end / 완료 : .btn_reward.is_complete -->
+						<button class="btn_reward" type="button"><span class="blind">보상받기</span></button>
+					</div>
+				</div>
+				<div class="reward">
+					<strong class="blind">토너먼트 1회 참여하면 1억 칩 지급!</strong>
+					<div class="btn_box">
+						<span class="counter is_disabled" style="display:block;"><span class="txt_highlight">1,000</span>/1,000명</span>
+						<button class="btn_reward is_disabled" type="button"><span class="blind">보상받기</span></button>
+					</div>
+				</div>
+				<div class="reward">
+					<strong class="blind">1회 입상하기 10억 칩 지급!</strong>
+					<div class="btn_box">
+						<span class="counter is_disabled" style="display:block;"><span class="txt_highlight">100</span>/100명</span>
+						<button class="btn_reward is_complete" type="button"><span class="blind">보상받기</span></button>
+					</div>
+				</div>
+				<p class="txt_warning"><span class="blind">매일 08시에 이벤트가 초기화됩니다.</span></p>
+			</div>
+	
+			<!-- 토너먼트 영역 -->
+			<div class="tournament_area">
+				
+				<!-- [D] 매시간마다 : .tournament.hourly / 나이트크롤러 : .tournament.night / display로 활성/비활성화 -->
+				<!-- 매시간 토너먼트 OPEN -->
+				<div class="tournament hourly" style="display:block">
+					<div class="tit"><h2 class="blind">매시간마다 토너먼트 OPEN</h2></div>
+					<div class="rolling_slide">
+						<div class="ticket_box swiper-container swiper1">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide"><img src="img/img_hourly_ticket_b.png" alt=""></li>
+								<li class="swiper-slide"><img src="img/img_hourly_ticket_p.png" alt=""></li>
+							</ul>
+							<div class="pagination">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>	
+						</div>
+						<div class="info_box">
+							<ul>
+							<li style="display:block"><img src="img/img_hourly_info_b.png" alt="매시간 10분마다 상금 500억 바이인 2억"></li>
+							<li style="display:none"><img src="img/img_hourly_info_p.png" alt="매시간 40분마다 상금 1500억 바이인 6억"></li>
+							</ul>
+						</div>
+					</div>
+					<button type="button" class="btn_popup"><span class="blind">한눈에 보기</span></button>
+					<p class="txt_warning"><span class="blind">지급된 토너먼트 티켓은 당일에만 사용 가능합니다.</span></p>
+				</div>
+	
+				<!-- 나이트크롤러 -->
+				<div class="tournament night" style="display:none">
+					<div class="tit"><h2 class="blind">나이트크롤러 AM 02~07시 토너먼트 OPEN</h2></div>
+					<div class="rolling_slide">
+						<div class="ticket_box swiper-container swiper2">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide"><img src="img/img_night_ticket_b.png" alt=""></li>
+								<li class="swiper-slide"><img src="img/img_night_ticket_p.png" alt=""></li>
+							</ul>
+							<div class="pagination">
+								<span></span>
+								<span></span>
+							</div>	
+						</div>
+						<div class="info_box">
+							<ul>
+							<li style="display:block"><img src="img/img_night_info_b.png" alt="매시간 10분 상금 500억 바이인 2억"></li>
+							<li style="display:none"><img src="img/img_night_info_p.png" alt="매시간 40분 상금 1500억 바이인 6억"></li>
+							</ul>
+						</div>
+					</div>
+					<button type="button" class="btn_popup"><span class="blind">한눈에 보기</span></button>
+					<p class="txt_warning"><span class="blind">지급된 토너먼트 티켓은 당일에만 사용 가능합니다.</span></p>
+				</div>
+	
+			</div>
+		</div>
+	
+		<!-- footer -->
+		<div class="footer"><p class="blind">&copy; NHN Corp. All rights reserved.</p></div>
+		
+		<!-- floating buttons -->
+		<a href="#none" class="btn_floating btn_play"><span class="blind">매일매일 무료 티켓 5종 지급! 게임하러 가기</span></a>
+		<a href="#none" class="btn_floating btn_money"><span class="blind">수수료 0% 머니교환소 바로가기</span></a>
+		<button type="button" class="btn_floating btn_close"><span class="blind">창닫기</span></button>
+	</div>
+
+	<!-- 레이어팝업 -->
+	<div class="dimmed" style="display:none;"></div>
+
+	<!-- 레이어팝업 : 토너먼트정보 한눈에 보기 -->
+	<div class="ly_pop ly_pop1" style="display:none;">
+		<strong class="blind">더블에이 포커 토너먼트 정보 한눈에 보기</strong>
+		<div class="ly_table1">
+			<table class="blind">
+				<caption><span>아침 08시~밤01시까지 토너먼트 정보 표</span></caption>
+				<colgroup>
+					<col span="4">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>시간</th>
+						<th>개런티상금</th>
+						<th>바이인</th>
+						<th>머니인(참여인원 기준)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>매시간 10분</td>
+						<td>500억</td>
+						<td>2억</td>
+						<td>참여인원의 20%</td>
+					</tr>
+					<tr>
+						<td>매시간 40분</td>
+						<td>1500억</td>
+						<td>6억</td>
+						<td>참여인원의 20%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="ly_table2">
+			<table class="blind">
+				<caption><span>밤 02시~07시까지 토너먼트 정보 표</span></caption>
+				<colgroup>
+					<col span="4">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>시간</th>
+						<th>개런티상금</th>
+						<th>바이인</th>
+						<th>머니인(참여인원 기준)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>매시간 10분</td>
+						<td>500억</td>
+						<td>2억</td>
+						<td>참여인원의 20%</td>
+					</tr>
+					<tr>
+						<td>매시간 40분</td>
+						<td>5000억</td>
+						<td>15억</td>
+						<td>참여인원의 20%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="ly_notice blind">
+			<p>매주 토요일 22:40분에는 별도의 경기가 진행됩니다.</p>
+			<p>토너먼트 참여 인원에 따라서 상금 금액 및 머니인 인원은 변경됩니다.</p>
+			<p>토너먼트 티켓은 매일 08시에 지급되며 사용하지 않은 티켓은 소멸됩니다.</p>
+			<p>토너먼트 시간의 경우 변경될 수 있습니다.</p>
+		</div>
+		<button type="button" class="ly_btn_close"><span class="blind">팝업창 닫기</span></button>
+	</div>
+
+	<!-- 레이어팝업 : 출석 완료 보상 -->
+	<div class="ly_pop ly_pop2" style="display:none;">
+		<strong class="blind">출석 완료 보상</strong>
+		<span class="blind">1000만 칩 지급!</span>
+		<button type="button" class="ly_btn_confirm"><span class="blind">확인</span></button>
+	</div>
+
+	<!-- 레이어팝업 : 토너먼트 1회 참여 보상 -->
+	<div class="ly_pop ly_pop3" style="display:none;">
+		<strong class="blind">토너먼트 1회 참여 보상</strong>
+		<span class="blind">1억 칩 지급!</span>
+		<button type="button" class="ly_btn_confirm"><span class="blind">확인</span></button>
+	</div>
+
+	<!-- 레이어팝업 : 토너먼트 1회 입상 보상 -->
+	<div class="ly_pop ly_pop4" style="display:none;">
+		<strong class="blind">토너먼트 1회 입상 보상</strong>
+		<span class="blind">10억 칩 지급!</span>
+		<button type="button" class="ly_btn_confirm"><span class="blind">확인</span></button>
+	</div>
+
+	<!-- 레이어팝업 : 보상 내역 없음 -->
+	<div class="ly_pop ly_pop5" style="display:none;">
+		<strong class="blind">보상 내역이 없습니다. 게임 참여 후 보상을 확인하세요!</strong>
+		<button type="button" class="ly_btn_confirm"><span class="blind">확인</span></button>
+	</div>
+
+	<!-- 레이어팝업 : 보상 인원 마감 -->
+	<div class="ly_pop ly_pop6" style="display:none;">
+		<strong class="blind">보상인원이 마감되었습니다. 내일 다시 참여 해주세요!</strong>
+		<button type="button" class="ly_btn_confirm"><span class="blind">확인</span></button>
+	</div>
+
+</div>
+
+<!-- case review / [D] 마크업 검수용, 개발제외 -->
+<style>
+.caseview{display:block;position:fixed;min-width:130px;padding:10px 5px 5px;left:10px;bottom:10px;z-index:9000;background-color:rgba(000,000,000,.6)}
+.caseview a,.caseview span{display:block;padding:6px 0 4px;color:#fff;text-align:left;font-size:12px;line-height:12px;text-decoration:none}
+.caseview a:first-child{margin-top:0}
+.caseview .caseview_lst{overflow-y:auto;max-height:205px}
+.caseview .caseview_lst a:hover{color:#ffd700}
+.caseview .point_view{color:#ffd700}
+.caseview .multiple_select>span{padding:10px 0 3px;}
+.caseview .multiple_select:first-child>span{padding-top:0}
+.caseview .multiple_select a{display:inline-block;width:auto}
+.caseview .multiple_select a::before,.caseview .multiple_select a::after{display:inline-block;content:'';width:10px;height:100%}
+.caseview .multiple_select a+span{margin-top:10px}
+.caseview .multiple_select .depth{margin-left:10px}
+.caseview .multiple_select.case2 a{display:block}
+.caseview .multiple_select.case2 .multiple_select a{display:inline-block}
+.caseview .caseview_lst{margin-bottom:5px}
+.caseview .caseview_lst.off{display:none}
+.caseview .close{background:#fff;color:#000;text-align:center}
+</style>
+<div class="caseview">
+	<div class="caseview_lst">
+		<div class="multiple_select case2">
+			<span class="point_view">[화면] 보상 버튼</span>
+			<a href="#none" class="case_1_01">보상받기 (활성화)</a>
+			<a href="#none" class="case_1_02">보상받기 (비활성화)</a>
+			<a href="#none" class="case_1_03">종료 (비활성화)</a>
+			<a href="#none" class="case_1_04">완료 (비활성화)</a>
+			<span class="point_view">[화면] 버튼 상단의 인원수</span>
+			<a href="#none" class="case_2_01">인원수 표기</a>
+			<a href="#none" class="case_2_02">인원수 미표기</a>
+			<span class="point_view">[화면] 토너먼트 영역</span>
+			<a href="#none" class="case_3_01">토너먼트 - 매시간마다</a>
+			<a href="#none" class="case_3_02">토너먼트 - 나이트크롤러</a>
+			<span class="point_view">[팝업] 레이어팝업</span>
+			<a href="#none" class="case_4_01">토너먼트 한눈에보기</a>
+			<a href="#none" class="case_4_02">출석 완료 보상</a>
+			<a href="#none" class="case_4_03">토너먼트 1회 참여 보상</a>
+			<a href="#none" class="case_4_04">토너먼트 1회 입상 보상</a>
+			<a href="#none" class="case_4_05">보상 내역 없음</a>
+			<a href="#none" class="case_4_06">보상 인원 마감</a>
+		</div>
+	</div>
+	<a href="#none" onclick="$(this).prev().toggleClass('off')" class="close">가이드 펼치기/접기</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
+<script>
+// 케이스뷰 버튼 클릭
+$('.case_1_01').on('click',function(){$('.dimmed,.ly_pop').hide();$('.btn_reward').attr('class','btn_reward');$('.counter').attr('class','counter');})
+$('.case_1_02').on('click',function(){$('.dimmed,.ly_pop').hide();$('.btn_reward').attr('class','btn_reward is_disabled');$('.counter').attr('class','counter is_disabled');})
+$('.case_1_03').on('click',function(){$('.dimmed,.ly_pop').hide();$('.btn_reward').attr('class','btn_reward is_end');$('.counter').attr('class','counter is_disabled');})
+$('.case_1_04').on('click',function(){$('.dimmed,.ly_pop').hide();$('.btn_reward').attr('class','btn_reward is_complete');$('.counter').attr('class','counter is_disabled');})
+$('.case_2_01').on('click',function(){$('.dimmed,.ly_pop').hide();$('.counter').show();})
+$('.case_2_02').on('click',function(){$('.dimmed,.ly_pop').hide();$('.counter').hide();})
+$('.case_3_01').on('click',function(){$('.dimmed,.ly_pop').hide();$('.tournament').hide();$('.tournament.hourly').show();});
+$('.case_3_02').on('click',function(){$('.dimmed,.ly_pop').hide();$('.tournament').hide();$('.tournament.night').show();});
+$('.case_4_01').on('click',function(){$('.dimmed,.ly_pop').hide();$('.dimmed,.ly_pop1').show();})
+$('.case_4_02').on('click',function(){$('.dimmed,.ly_pop').hide();$('.dimmed,.ly_pop2').show();})
+$('.case_4_03').on('click',function(){$('.dimmed,.ly_pop').hide();$('.dimmed,.ly_pop3').show();})
+$('.case_4_04').on('click',function(){$('.dimmed,.ly_pop').hide();$('.dimmed,.ly_pop4').show();})
+$('.case_4_05').on('click',function(){$('.dimmed,.ly_pop').hide();$('.dimmed,.ly_pop5').show();})
+$('.case_4_06').on('click',function(){$('.dimmed,.ly_pop').hide();$('.dimmed,.ly_pop6').show();})
+$('.btn_popup').on('click',function(){$('.dimmed,.ly_pop1').show();})
+$('.ly_btn_confirm').on('click',function(){$('.dimmed,.ly_pop').hide();})
+$('.ly_btn_close').on('click',function(){$('.dimmed,.ly_pop').hide();})
+$('.caseview a').on('click',function(){return false;})
+
+// [D] .ticket_box 티켓이미지 롤링 (Swiper 4.5.1)
+const swiperOptions1 = {
+	loop: true,
+	autoplay: {delay: 5000},
+	pagination: {el: '.pagination', clickable: 'true'},
+	observer: true,
+  observeParents: true,
+	on: {
+		slideChange:function(){
+			$('.tournament.hourly .info_box li').hide().eq(this.realIndex).show();
+		}
+	}
+};
+const swiperOptions2 = {
+	loop: true,
+	autoplay: {delay: 5000,},
+	pagination: {el: '.pagination', clickable: 'true'},
+	observer: true,
+  observeParents: true,
+	on: {
+		slideChange:function(){
+			$('.tournament.night .info_box li').hide().eq(this.realIndex).show();
+		}
+	}
+};
+const swiper1 = new Swiper('.swiper1', swiperOptions1);
+const swiper2 = new Swiper('.swiper2', swiperOptions2);
+</script>
+<!-- // case review / [D] 마크업 검수용, 개발제외 -->
+
+
+</body></html>

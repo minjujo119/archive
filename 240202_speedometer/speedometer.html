@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>스피드미터 구현</title>
+</head>
+<body>
+<style>
+@charset "UTF-8";
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,input,select,textarea,button,article,aside,dialog,header,section,footer,nav,figure,main{margin:0;padding:0}
+article,aside,dialog,header,section,footer,nav,figure,main{display:block}
+html,body{-webkit-text-size-adjust:none;-ms-text-size-adjust:none}
+ul,ol{list-style:none}
+table{table-layout:fixed;border-spacing:0}
+input,button,select{-webkit-appearance:none;appearance:none;border:0;border-radius:0;background-color:transparent}
+input::-ms-clear{display:none}
+img,fieldset{border:0;vertical-align:top}
+em,address{font-style:normal}
+a{color:#242424;text-decoration:none;cursor:pointer}
+button,input,label{-webkit-user-select:none;user-select:none}
+button{cursor:pointer;white-space:nowrap}
+button::-moz-focus-inner{padding:0;border:0}
+::-webkit-file-upload-button{cursor:pointer}
+hr{display:none}
+.blind,caption span,legend{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;clip:rect(0,0,0,0)}
+
+/* common */
+body,input,select,textarea,button,a{font-family:-apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo',sans-serif;word-break:keep-all;word-wrap:break-word}
+body.scroll_lock{overflow:hidden;touch-action:none}
+div{-webkit-box-sizing:border-box;box-sizing:border-box}
+input:focus{outline:0}
+input::placeholder{font-size:14px;line-height:20px;color:rgba(0,0,0,0.38)}
+input::-webkit-input-placeholder{font-size:14px;line-height:20px;color:rgba(0,0,0,0.38)}
+input:-ms-input-placeholder{font-size:14px;line-height:20px;color:rgba(0,0,0,0.38)}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb {border-radius:10px;background:rgba(0,0,0,0.2)}
+.skip{height:0}
+.skip a{display:block;position:absolute;left:0;top:-100px;width:100%;text-align:center}
+.skip a:focus, .skip a:active{position:absolute;top:0;z-index:210;padding:10px 0;background:#000;font-weight:bold;color:#fff;font-size:20px;text-decoration:none}
+.wrap{position:relative;width:100%;height:100%;margin:0 auto}
+  
+.gauge_box,a,button{font-family:'Pretendard',sans-serif;}
+.gauge_box{width:592px;height:354px;margin:20px auto;padding:30px 18px 32px;background-color:#1a1b1f;border-radius:20px;text-align:left;box-sizing:border-box;}
+.gauge_box>.tit{color:#fff}
+.gauge_box>.tit{display:block;width:132px;height:22px;margin-left:12px;background:url(../img/pcp_new/img_draw_tit8.png) no-repeat;}
+.gauge{overflow:hidden;position:relative;width:556px;height:278px}
+.gauge .sector_lst{overflow:hidden;position:relative;height:100%;border-radius:278px 278px 0 0;box-sizing:border-box;}
+.gauge .sector_lst:before{position:absolute;bottom:0;left:40px;z-index:10;width:476px;height:238px;background-color:transparent;opacity:0.2;border:5px solid #000;border-bottom:none;border-radius:278px 278px 0 0;content:'';box-sizing:border-box;}
+.gauge .sector_lst:after{position:absolute;bottom:0;left:0;width:556px;height:278px;background:url(../img/pcp_new/img_gauage_circ2.png) no-repeat;background-size:100%;background-position:100% 0;content:'';}
+.gauge .sector{position:absolute;width:100%;height:100%;top:0;left:0;border-width:40px;border-bottom-width:2px;border-color:#000;border-style:solid;border-radius:278px 278px 0 0;color:#505050;background-color:#6a6a6a;transform-origin:center bottom;box-sizing:border-box;transition-property:color,background-color;}
+.gauge .sector:first-child{border-bottom-width:0}
+.gauge .sector .txt{position:absolute;font-weight:700;text-align:center;font-size:12px}
+.gauge .sector .txt_ticket{bottom:26px;left:-24px}
+.gauge .sector .txt_point{position:absolute;bottom:19px;left:14px;transition-delay:inherit;}
+.gauge .sector9 .txt_point{left:4px}
+.gauge .sector7 .txt_point,
+.gauge .sector8 .txt_point{left:2px}
+.gauge .sector4 .txt_point,
+.gauge .sector5 .txt_point,
+.gauge .sector6 .txt_point,
+.gauge .sector10 .txt_point{left:6px}
+.gauge .sector1 .txt {transform:rotate(0)}
+.gauge .sector2 .txt {transform:rotate(-15deg)}
+.gauge .sector3 .txt {transform:rotate(-30deg)}
+.gauge .sector4 .txt {transform:rotate(-45deg)}
+.gauge .sector5 .txt {transform:rotate(-60deg)}
+.gauge .sector6 .txt {transform:rotate(-75deg)}
+.gauge .sector7 .txt {transform:rotate(-90deg)}
+.gauge .sector8 .txt {transform:rotate(-105deg)}
+.gauge .sector9 .txt {transform:rotate(-120deg)}
+.gauge .sector10 .txt{transform:rotate(-135deg)}
+.gauge .sector11 .txt{transform:rotate(-150deg)}
+.gauge .sector12 .txt{transform:rotate(-165deg)}
+.gauge .sector1{transform:rotate(0)}
+.gauge .sector2{transform:rotate(15deg)}
+.gauge .sector3{transform:rotate(30deg)}
+.gauge .sector4{transform:rotate(45deg)}
+.gauge .sector5{transform:rotate(60deg)}
+.gauge .sector6{transform:rotate(75deg)}
+.gauge .sector7{transform:rotate(90deg)}
+.gauge .sector8{transform:rotate(105deg)}
+.gauge .sector9{transform:rotate(120deg)}
+.gauge .sector10{transform:rotate(135deg)}
+.gauge .sector11{transform:rotate(150deg)}
+.gauge .sector12{transform:rotate(165deg)}
+.gauge .sector.is_active{background-color:currentColor}
+.gauge .sector.is_active .txt_point{color:#000}
+.gauge .sector1.is_active {color:#fbea44}
+.gauge .sector2.is_active {color:#d6c738}
+.gauge .sector3.is_active {color:#d6c738}
+.gauge .sector4.is_active {color:#adc744}
+.gauge .sector5.is_active {color:#adc744}
+.gauge .sector6.is_active {color:#54bf4a}
+.gauge .sector7.is_active {color:#54bf4a}
+.gauge .sector8.is_active {color:#3c83ef}
+.gauge .sector9.is_active {color:#3c83ef}
+.gauge .sector10.is_active{color:#0b98f7}
+.gauge .sector11.is_active{color:#0faff6}
+.gauge .sector12.is_active{color:#11bbe9}
+.gauge .summary{position:absolute;bottom:-90px;left:50%;width:190px;height:190px;color:#fff;text-align:center;transform:translateX(-50%);border-radius:100%;background-color:#1a1b1f}
+.gauge .summary:after{position:absolute;top:0;left:0;width:190px;height:190px;background:url(../img/pcp_new/img_gauage_circ1.png) no-repeat;background-size:100%;background-position:0 0;content:'';}
+.gauge .summary .tit{display:block;margin-top:40px;font-size:18px;font-weight:400}
+.gauge .summary_num{display:inline-block;font-size:0}
+.gauge .summary_num .bx_num{display:inline-block;font-size:24px;color:#f07322;font-weight:700}
+.gauge .summary .unit{display:inline-block;margin-left:3px;font-size:16px;}
+.gauge .needle{position:absolute;bottom:-20px;right:50%;width:135px;height:40px;background-image:url(https://hangame-images.toastoven.net/hangame/poker/renew/pcp_new/img_gauge_needle.png);transform-origin:100% 50%;transform:rotate(0);transition-property:transform;transition-duration:0.8s;transition-timing-function:ease-in-out;}
+.caseview{text-align:center;}
+.case_btn{color:#333;text-decoration:none;font-weight:700;border:1px solid #333;padding:2px}
+</style>
+
+<div class="gauge_box">
+  <em class="tit"><span class="blind">스피드 모션</span></em>
+  <div class="gauge">
+    <div class="sector_lst">
+      <div class="sector sector1"><span class="txt txt_ticket">1</span><span class="txt txt_point">0</span></div>
+      <div class="sector sector2"><span class="txt txt_ticket">2</span><span class="txt txt_point">10</span></div>
+      <div class="sector sector3"><span class="txt txt_ticket">3</span><span class="txt txt_point">20</span></div>
+      <div class="sector sector4"><span class="txt txt_ticket">4</span><span class="txt txt_point">30</span></div>
+      <div class="sector sector5"><span class="txt txt_ticket">5</span><span class="txt txt_point">40</span></div>
+      <div class="sector sector6"><span class="txt txt_ticket">6</span><span class="txt txt_point">50</span></div>
+      <div class="sector sector7"><span class="txt txt_ticket">7</span><span class="txt txt_point">60</span></div>
+      <div class="sector sector8"><span class="txt txt_ticket">8</span><span class="txt txt_point">70</span></div>
+      <div class="sector sector9"><span class="txt txt_ticket">9</span><span class="txt txt_point">80</span></div>
+      <div class="sector sector10"><span class="txt txt_ticket">10</span><span class="txt txt_point">90</span></div>
+      <div class="sector sector11"><span class="txt txt_ticket">11</span><span class="txt txt_point">100</span></div>
+      <div class="sector sector12"><span class="txt txt_ticket">12</span><span class="txt txt_point">110</span></div>
+    </div>
+    <span class="needle"></span>
+    <div class="summary">
+      <span class="tit">단위 km/h</span>
+    </div>    
+  </div>        
+</div>
+  
+<div class="caseview">
+  <a href="#none" class="case_btn">1구간</a>
+  <a href="#none" class="case_btn">2구간</a>
+  <a href="#none" class="case_btn">3구간</a>
+  <a href="#none" class="case_btn">4구간</a>
+  <a href="#none" class="case_btn">5구간</a>
+  <a href="#none" class="case_btn">6구간</a>
+  <a href="#none" class="case_btn">7구간</a>
+  <a href="#none" class="case_btn">8구간</a>
+  <a href="#none" class="case_btn">9구간</a>
+  <a href="#none" class="case_btn">10구간</a>
+  <a href="#none" class="case_btn">11구간</a>
+  <a href="#none" class="case_btn">12구간</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js"></script>
+<script>
+const sectors = document.querySelectorAll('.sector');
+const needle = document.querySelector('.needle');
+
+const gaugeMotion = function(num){
+  
+  // 바늘 회전 속도
+  let needleSpeed = window.getComputedStyle(needle).getPropertyValue("transition-duration");
+      needleSpeed = Number(needleSpeed.replace('s',''));
+
+  // 바늘 회전하기
+  needle.style.transform = 'rotate('+ String(num*15 + 7.5) + 'deg)'; 
+  Array.prototype.forEach.call(sectors,function(sec, secIndex){
+    if(secIndex <= num){
+      sec.style.transitionDelay = String(needleSpeed/num*secIndex) +'s';
+      sec.classList.add('is_active'); // 컬러 활성화
+    }
+    else{
+      sec.style.transitionDelay = '0s';
+      sec.classList.remove('is_active');
+    };
+  });
+};
+
+$('.case_btn').on("click",function(){
+  var caseIndex = $(this).index();
+    gaugeMotion(caseIndex);
+});
+</script>
+
+</body>
+</html>

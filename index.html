@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>예제 Index</title>
+<style>
+@charset "utf-8";
+/* Common */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,textarea,input,select,textarea,button,article,aside,dialog,footer,header,section,footer,nav,figure,main{margin:0;padding:0}
+article,aside,dialog,footer,header,section,footer,nav,figure,main{display:block}
+html,body{height:100%;-webkit-text-size-adjust:none;-ms-text-size-adjust:none}
+body,input,select,textarea,button{font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica;font-size:12px;color:#333;line-height:1.2}
+fieldset,li,img{border:0;vertical-align:top}
+ul,ol{list-style:none}
+button{overflow:visible;border:0;background-color:transparent;cursor:pointer}
+button::-moz-focus-inner{padding:0;border:0}
+address,caption,em{font-style:normal}
+a,a:focus,a:active,a:hover{color:#000;text-decoration:none}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:none}
+.blind,caption span,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+/* index */
+body{padding:0 15px;word-wrap:break-word;word-break:break-all}
+header{padding:10px 0}
+h1{font-size:18px}
+h1:before{display:inline;content:'['}
+h1:after{display:inline;content:']'}
+h2{clear:both;padding:30px 0 5px;border-bottom:3px solid #333;font-size:16px}
+h3{clear:both;padding:30px 0 5px;border-bottom:1px solid #333;font-size:14px}
+.markup,.guide{margin-bottom:50px}
+.markup li{border-bottom:1px solid #dfdfdf}
+.markup li a{position:relative;display:block;padding:8px 30px 6px 2px}
+.markup li a:after{position:absolute;right:0;color:#909090;font-weight:bold;content:' >';}
+.markup li span{margin-left:5px;font-size:11px;color:#909090}
+.markup li .dsc{}
+.markup li .dsc:before{display:inline;padding:0 3px;content:'('}
+.markup li .dsc:after{display:inline;padding:0 3px;content:')'}
+.markup li .new,.markup li .up,.markup li .etc,.markup li .del,.markup li .pop{display:inline;height:14px;padding:1px 2px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;color:#fff;line-height:14px;vertical-align:middle}
+.markup li .new{background:#fd3939}
+.markup li .up{background:#45a7fb}
+.markup li .etc{background:#2fbf6d}
+.markup li .del{background:#a5a5a5}
+.markup li .pop{border:1px solid #909090;background:#fff;color:#909090}
+.guide li{position:relative;padding:5px 2px 5px 20px}
+.guide li:before{position:absolute;top:5px;left:0;content:'•'}
+.guide li em{display:inline-block;margin:0 5px 0 -5px;padding:0 5px;background:#f4f4f4}
+footer{clear:both;padding:10px;background:#f4f4f4;text-align:center}
+dt,dd{display:block}
+footer dd{margin-top:5px}
+dt:after{display:inline;content:': '}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(function(){
+  $('#content a').each(function(){
+    $('<span>/ '+$(this).attr('href')+'</span>').appendTo($(this));
+  });
+});
+</script>
+</head>
+<body>
+
+<header>
+  <h1>Study 예제 산출물</h1>
+</header>
+
+<div id="content">
+  <h2>개인별 산출물</h2>
+  <section class="markup">
+  <ul>
+  <li><a href="./240123_hangame_promotion_test/event.html">한게임 프로모션 CSS 단위통일(rem) 테스트</a></li>
+  <li><a href="./240202_speedometer/speedometer.html">스피드미터 테스트 구현</a></li>
+  <li><a href="./240202_loding_spinner/spinner.html">(작업중) 로딩스피너 이미지 없이 만들어보기</a></li>
+  <li><a href="./240223_find_bomb/find_bomb_game.html">(작업중) 지뢰찾기 게임 만들어보기</a></li>
+  </ul>
+  </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>페이지네이션 컴포넌트 공부</title>
+</head>
+<body>
+
+
+<div class="pagination">
+  <button type="button" class="btn_prev"></button>
+  <a href="#none" class="page is_selected">1</a>
+  <a href="#none" class="page">2</a>
+  <a href="#none" class="page">3</a>
+  <a href="#none" class="page">4</a>
+  <a href="#none" class="page">5</a>
+  <button type="button" class="btn_next"></button>
+</div>
+
+<style>
+/* reset */
+a{color:#333;text-decoration:none;cursor:pointer}
+button{cursor:pointer;white-space:nowrap}
+button::-moz-focus-inner{padding:0;border:0}
+input,button,select{-webkit-appearance:none;appearance:none;border:0;border-radius:0;background-color:transparent}
+
+/* pagination */
+.pagination{font-size:0;text-align:center;}
+.pagination .page{display:inline-block;*display:inline;zoom:1;font-size:18px;line-height:1;text-align:center;color:#000;vertical-align:middle;}
+.pagination .page:not(:first-of-type){margin-left:16px}
+.pagination .page.is_selected{color:red}
+.pagination .btn_prev,
+.pagination .btn_next{position:relative;padding:12px;background-color:rgba(0,0,0,0.1);border-radius:4px;border:1px solid rgba(0,0,0,0.3);box-sizing:border-box}
+.pagination .btn_prev{margin-right:20px}
+.pagination .btn_next{margin-left:20px}
+.pagination .btn_prev::before,
+.pagination .btn_prev::after,
+.pagination .btn_next::before,
+.pagination .btn_next::after{position:absolute;top:50%;left:50%;width:30%;height:30%;border-left:1px solid #000;content:""}
+.pagination .btn_prev::before{transform:translate(-20%,-50%) rotate(45deg)}
+.pagination .btn_prev::after{transform:translate(-20%,-50%) rotate(-45deg)}
+.pagination .btn_next::before{transform:translate(-5%,20%) rotate(45deg)}
+.pagination .btn_next::after{transform:translate(-5%,-120%) rotate(-45deg)}
+
+.pagination .btn_prev:disabled,
+.pagination .btn_next:disabled{opacity:0.3;cursor:default}
+.pagination .btn_prev:active:not(:disabled),
+.pagination .btn_next:active:not(:disabled){opacity:0.8}
+</style>
+
+<script>
+const pages = document.querySelectorAll('.page');
+const pageLength = pages.length;
+const btnPrev = document.querySelector('.btn_prev');
+const btnNext = document.querySelector('.btn_next');
+let currentP = 0;
+const pageMinus = () => {
+  if(currentP > 0){
+    currentP -= 1;
+    pages.forEach(page => {page.classList.remove('is_selected')});
+    pages[currentP].classList.add('is_selected');
+  };
+};
+const pagePlus = () => {
+  if(currentP < pageLength - 1){
+    currentP += 1;
+    pages.forEach(page => {page.classList.remove('is_selected')});
+    pages[currentP].classList.add('is_selected');
+  };
+};
+btnPrev.addEventListener('click',()=>{pageMinus()});
+btnNext.addEventListener('click',()=>{pagePlus()});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

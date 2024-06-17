@@ -1,0 +1,91 @@
+@charset "utf-8";
+@font-face {font-family:'ns_m';font-weight:normal;font-style:normal;font-display:swap;src:url('font/notokr-medium.woff2') format('woff2'),url('font/notokr-medium.woff') format('woff'),url('font/notokr-medium.ttf') format('truetype')}
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,input,select,textarea,button,article,aside,dialog,header,section,footer,nav,figure,main{margin:0;padding:0;box-sizing:border-box}
+article,aside,dialog,header,section,footer,nav,figure,main{display:block} /* for ie8 */
+html,body{-webkit-text-size-adjust:none;-ms-text-size-adjust:none} /* for mobile */
+body,input,select,textarea,button,a{word-break:keep-all;font-family:'ns_m',-apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',helvetica,'Apple SD Gothic Neo',sans-serif} /* 시스템폰트 사용 */
+ul,ol{list-style:none}
+table{table-layout:fixed;border-spacing:0}
+input,button,select{-webkit-appearance:none ;appearance:none;border:0;border-radius:0;background-color:transparent}
+input::-ms-clear{display:none} /* input내 clear 버튼 제거 : IE10+ */
+img,fieldset{border:0;vertical-align:top;width:100%}
+em,address{font-style:normal}
+a{color:#333;text-decoration:none;cursor:pointer}
+button{cursor:pointer;white-space:nowrap}
+button::-moz-focus-inner{padding:0;border:0}
+::-webkit-file-upload-button{cursor:pointer}
+hr{display:none}
+.blind,caption span,legend{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;clip:rect(0,0,0,0)}
+
+/* 반응형을 위한 단위 계산 작업 */
+:root{
+  --bgImgWidth :1280; /* PSD로 받은 디자인 이미지 너비 */
+}
+html{
+  font-size:calc(1 / var(--bgImgWidth) * 100 * 1vw); /* html font-size가 1px이 되도록 vw 계산 */ 
+}
+
+/* 이후 모든 가변 요소는 디자인에 있는 px값 그대로 rem 단위로 선언 */
+/* 예) 80px -> 80rem */
+
+/* Layout */
+html{width:100vw;height:100vh}
+body{width:100%;background-color:#000}
+.wrap{position:relative;width:100%;margin:0 auto}
+.bg{position:absolute;top:0;left:0;width:100%;z-index:1}
+.container{position:relative;z-index:2}
+.bg > img {width:100%}
+.header{height:215rem}
+.contents{height:465rem;text-align:center}
+.footer{height:40rem}
+
+/* 너~무 쉬운 이벤트 */
+.reward_area{display:inline-block;width:663rem;height:350rem;padding:0 25rem;vertical-align:top;box-sizing:border-box}
+.reward_area .tit{height:65rem}
+.reward_area .reward{height:80rem;text-align:right}
+.reward_area .btn_box{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;width:136rem;height:100%}
+.reward_area .btn_box .counter{width:100%;height:26rem;background-color:#000;font-size:18rem;color:#d2cdcb;text-align:center;line-height:24rem;letter-spacing:-0.025em}
+.reward_area .btn_box .counter .txt_highlight{color:#ff3f19}
+.reward_area .btn_box .counter.is_disabled{color:#5e5e5e}
+.reward_area .btn_box .counter.is_disabled .txt_highlight{color:#5e5e5e}
+.reward_area .btn_box .btn_reward{width:128rem;height:44rem;background-image:url(../img/btn_reward.png);background-repeat:no-repeat;background-size:100%;background-position:0 0}
+.reward_area .btn_box .btn_reward.is_disabled{background-image:url(../img/btn_reward_disabled.png);cursor:default}
+.reward_area .btn_box .btn_reward.is_end{background-image:url(../img/btn_reward_end.png);cursor:default}
+.reward_area .btn_box .btn_reward.is_complete{background-image:url(../img/btn_reward_complete.png);cursor:default}
+.reward_area .txt_warning{height:45rem}
+
+/* 토너먼트 영역 */
+.tournament_area{display:inline-block;width:426rem;height:350rem;margin-left:8rem;vertical-align:top}
+.tournament_area .tournament{width:100%;height:100%;background-size:100%;background-position:0 0;padding:0 24rem;box-sizing:border-box}
+.tournament_area .tournament.hourly{background-image: url(../img/bg_tornament_hourly.png)}
+.tournament_area .tournament.night{background-image: url(../img/bg_tornament_night.png)}
+.tournament_area .tit{height:115rem}
+.tournament_area .rolling_slide{position:relative;width:376rem;height:131rem;padding:1rem;font-size:0;background:url(../img/bg_ticket.png) no-repeat;background-size:100%;background-position:0 0}
+.tournament_area .ticket_box{display:inline-block;width:164rem;height:100%;vertical-align:top}
+.tournament_area .ticket_box li{width:164rem;height:129rem}
+.tournament_area .ticket_box li>img{display:block;width:164rem}
+.tournament_area .info_box{display:inline-block;width:209rem;height:100%;margin-left:1rem;vertical-align:top}
+.tournament_area .info_box li{width:209rem;height:129rem}
+.tournament_area .pagination{position:absolute;bottom:11rem;left:50%;z-index:2;-webkit-transform:translate(-50%,0);transform:translate(-50%,0)}
+.tournament_area .pagination>span{display:inline-block;width:8rem;height:8rem;margin-left:12rem;border-radius:100%;background-color:#fff}
+.tournament_area .pagination>span:first-child{margin-left:0}
+.tournament_area .btn_popup{width:138rem;height:26rem;margin-top:16rem}
+
+/* floating buttons */
+.btn_floating{position:absolute;z-index:3;background-position:0 0}
+.btn_close{top:0;right:0;width:80rem;height:80rem;background:url(../img/btn_close.png) no-repeat;background-size:100%}
+.btn_money{top:16rem;left:16rem;width:282rem;height:81rem;background:url(../img/btn_link1.png) no-repeat;background-size:100%}
+.btn_play{bottom:40rem;left:50%;width:416rem;height:97rem;background:url(../img/btn_play.png) no-repeat;background-size:100%;transform:translate(-50%,0)}
+
+/* Layer */
+.dimmed{position:fixed;display:none;width:100%;height:100%;top:0;right:0;bottom:0;left:0;z-index:20;background-color:rgba(0,0,0,0.9)}
+.ly_pop{position:fixed;top:50%;left:50%;background-repeat:no-repeat;background-size:100% auto;z-index:100}
+.ly_pop .ly_btn_confirm{position:absolute;bottom:28rem;left:50%;width:180rem;height:56rem;transform:translate(-50%,0)}
+.ly_pop .ly_btn_close{position:absolute;top:10rem;right:10rem;width:100rem;height:100rem}
+.ly_pop1{width:1100rem;height:640rem;margin:-280rem -550rem;background-image:url(../img/ly_pop1.png)}
+.ly_pop2{width:460rem;height:520rem;margin:-260rem -230rem;background-image:url(../img/ly_pop2.png)}
+.ly_pop3{width:460rem;height:520rem;margin:-260rem -230rem;background-image:url(../img/ly_pop3.png)}
+.ly_pop4{width:460rem;height:520rem;margin:-260rem -230rem;background-image:url(../img/ly_pop4.png)}
+.ly_pop5{width:600rem;height:350rem;margin:-175rem -300rem;background-image:url(../img/ly_pop5.png)}
+.ly_pop6{width:600rem;height:350rem;margin:-175rem -300rem;background-image:url(../img/ly_pop6.png)}
