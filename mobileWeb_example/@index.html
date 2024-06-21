@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>한게임포커 모바일 메인 : 마크업 index</title>
+<style>
+@charset "utf-8";
+/* Common */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,textarea,input,select,textarea,button,article,aside,dialog,footer,header,section,footer,nav,figure,main{margin:0;padding:0}
+article,aside,dialog,footer,header,section,footer,nav,figure,main{display:block}
+html,body{height:100%;-webkit-text-size-adjust:none;-ms-text-size-adjust:none}
+body,input,select,textarea,button{font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica;font-size:12px;color:#333;line-height:1.2} 
+fieldset,li,img{border:0;vertical-align:top}
+ul,ol{list-style:none}
+button{overflow:visible;border:0;background-color:transparent;cursor:pointer}
+button::-moz-focus-inner{padding:0;border:0}
+address,caption,em{font-style:normal}
+a,a:focus,a:active,a:hover{color:#000;text-decoration:none}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:none}
+.blind,caption span,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+/* index */
+body{padding:0 15px;word-wrap:break-word;word-break:break-all}
+header{padding:10px 0}
+h1{font-size:18px}
+h1:before{display:inline;content:'['}
+h1:after{display:inline;content:']'}
+h2{clear:both;padding:30px 0 5px;border-bottom:3px solid #333;font-size:16px}
+h3{clear:both;padding:30px 0 5px;border-bottom:1px solid #333;font-size:14px}
+.markup,.guide{margin-bottom:50px}
+.markup li{border-bottom:1px solid #dfdfdf}
+.markup li a{display:block;padding:8px 30px 6px 2px;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%}
+.markup li span{margin-left:5px;font-size:11px;color:#909090}
+.markup li .dsc:before{display:inline;padding:0 3px;content:'('}
+.markup li .dsc:after{display:inline;padding:0 3px;content:')'}
+.markup li .new,.markup li .up,.markup li .etc,.markup li .del,.markup li .pop{display:inline;height:14px;padding:1px 2px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:normal;color:#fff;line-height:14px;vertical-align:middle}
+.markup li .new{background:#fd3939}
+.markup li .up{background:#45a7fb}
+.markup li .etc{background:#2fbf6d}
+.markup li .del{background:#a5a5a5}
+.markup li .pop{border:1px solid #909090;background:#fff;color:#909090}
+.guide li{position:relative;padding:5px 2px 5px 20px}
+.guide li:before{position:absolute;top:5px;left:0;content:'•'}
+.guide li em{display:inline-block;margin:0 5px 0 -5px;padding:0 5px;background:#f4f4f4}
+footer{clear:both;padding:10px;background:#f4f4f4;text-align:center}
+dt,dd{display:inline}
+dt:after{display:inline;content:': '}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(function(){
+	$('#content a').each(function(){
+		$('<span>/ '+$(this).attr('href')+'</span>').appendTo($(this));
+	});
+});
+</script>
+</head>
+<body>
+
+<header>
+	<h1>한게임포커 모바일 메인</h1>
+</header>
+
+<div id="content">
+	<h2>마크업 산출물</h2>
+	<section class="markup"> 
+		<h3>메인</h3>
+		<ul>
+		<li><a href="./00_main.html">메인페이지<span class="new">NEW 24.04.30</span></a></li>
+		<li><a href="./include/header_gnb.html">ㄴ 헤더 및 GNB (php include)<span class="new">NEW 24.04.30</span></a></li>
+		<li><a href="./include/bottom_sheet.html">ㄴ 바텀시트 (php include)<span class="new">NEW 24.04.30</span></a></li>
+		<li><a href="./include/footer.html">ㄴ 푸터 (php include)<span class="new">NEW 24.04.30</span></a></li>
+		</ul>
+
+		<h3>서브</h3>
+		<ul>		
+		<li><a href="./01_shop_plus_only_avatar.html">포커상점 - Plus전용아바타<span class="new">NEW 24.04.30</span></a></li>
+		<li><a href="./01_shop_money_draw_item.html">포커상점 - 머니뽑기/아바타 (추후 오픈 예정)<span class="new">NEW 24.04.30</span></a></li>
+		<li><a href="./01_shop_money_avatar.html">포커상점 - 머니아바타<span class="new">NEW 24.04.30</span></a></li>
+		<li><a href="./02_guide_jokbo.html">게임방법 - 포커족보<span class="new">NEW 24.05.08</span></a></li>
+		<li><a href="./02_guide_rule.html">게임방법 - 게임 방법과 규칙<span class="new">NEW 24.05.08</span></a></li>
+		<li><a href="./02_guide_strategy.html">게임방법 - 포커 게임 전략<span class="new">NEW 24.05.08</span></a></li>
+		<li><a href="./03_pcbang_benefit.html">PC방 혜택<span class="new">NEW 24.04.30</span></a></li>
+		</ul>
+
+		<h3>팝업</h3>
+		<ul>		
+		<li><a href="./99_popup.html">팝업<span class="new">NEW 24.04.30</span></a></li>
+		</ul>
+
+	</section>
+
+
+	<h2>마크업 가이드</h2>
+	<section class="guide">
+		<h3>Info</h3>
+		<ul>
+		<li>
+			<em>대응범위</em>
+			MO / Chrome, Safari, Samsung Internet
+		</li>
+		<h3>Issues</h3>
+		<ul>
+		<li></li>
+		</ul>
+	</section>
+</div>
+
+<footer>
+	<dl>
+	<dt>마크업 담당자</dt>
+	<dd>하이브랩 인터랙티브 UI개발 1팀</dd>
+	</dl>
+</footer>
+</body>
+</html>

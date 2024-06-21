@@ -1,0 +1,40 @@
+<!-- [D] .bottom_sheet_wrap에 is_up 클래스 추가 시 위로 상승 -->
+<div class="bottom_sheet_wrap">
+
+  <!-- [D] Top 버튼 -->
+  <a href="#wrap" class="btn_top ico arrow_top" role="button" style="display:none;"><span class="blind">맨 위로</span></a>
+
+  <div class="bottom_sheet">
+    <!-- [D] 로그인 전 -->
+    <div class="member_data_area" style="display:none;">
+      <p class="txt_notice">로그인 후 이용해주세요.</p>
+      <a href="javascript:;" class="btn_login btn btn_point2">로그인</a>
+    </div>
+
+    <!-- [D] 로그인 후 -->
+    <div class="member_data_area" style="display:block;">
+      <div class="info_box">
+        <div class="nickname" role="text">
+          <span class="img"><img src="img/img_pokerplus_z.png" alt="Z-Plus 회원제"></span>
+          <span class="txt">가나다라마바사1</span>
+          <span class="unit">님</span>
+        </div>
+        <!-- [D] .vip 클래스 타입별로 1개만 작성 -->
+        <div class="vip vip_premium">프리미엄 클래스</div>
+        <div class="vip vip_first" style="display:none;">퍼스트 클래스</div>
+        <div class="vip vip_business" style="display:none;">비즈니스 클래스</div>
+      </div>
+      <div class="money_box">
+        <div class="money_row">
+          <div class="title">포커머니</div>
+          <div class="desc" role="text"><span class="num">0000조 0000억 0000만 0000</span><span class="unit">블루</span></div>
+        </div>
+        <div class="money_row hancoin">
+          <div class="title">한코인</div>
+          <div class="desc" role="text"><span class="num">112,345,000</span><span class="unit">원</span></div>
+          <button type="button" class="btn btn_charge btn_point"><span class="txt">충전</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

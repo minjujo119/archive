@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="한게임포커에서 7포커, 맞포커, 로우바둑이 등 다양한 포커 게임의 룰과 하는 방법에 대해 알아보세요!">
+<title>포커 하는 법 - 파티훌라, 7포커, 로우바둑이, 하이로우, 맞포커 | 한게임포커</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<!-- [D] body에 .scroll_lock 클래스 추가 시 스크롤 제한 -->
+<body>
+<!-- [D] 전페이지 공통 건너뛰기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+
+<!-- [D] wrap -->
+<div id="wrap" class="wrap">
+
+	<!-- [D] header & gnb -->
+  <?php include 'include/header_gnb.html'?>
+
+  <!-- [D] content -->
+  <main id="content" class="content content_sub guide">
+
+    <!-- [D] LNB 영역 : lnb 스크롤 고정 시 is_fixed 클래스 추가 -->
+    <div class="lnb">
+      <ul class="lnb_lst">
+        <li class="lnb_itm"><a href="./02_guide_jokbo.html" class="lnb_link"><span class="txt">포커 족보</span></a></li>
+        <li class="lnb_itm is_selected"><a href="./02_guide_rule.html" class="lnb_link"><span class="txt">게임 방법과 규칙</span></a></li>
+        <li class="lnb_itm"><a href="./02_guide_strategy.html" class="lnb_link"><span class="txt">포커 게임 전략</span></a></li>
+      </ul>
+      <!-- [D] 참조된 section id값 변경 시 똑같이 변경해주세요. -->
+      <div class="bookmark_lst">
+        <a href="#section1" class="bookmark_itm is_selected">기본 룰</a>
+        <a href="#section2" class="bookmark_itm">포커 게임 종류</a>
+        <a href="#section3" class="bookmark_itm">7포커 하는법</a>
+        <a href="#section4" class="bookmark_itm">로우바둑이 하는법</a>
+        <a href="#section5" class="bookmark_itm">하이로우 하는법</a>
+        <a href="#section6" class="bookmark_itm">라스베가스 홀덤 하는법</a>
+        <a href="#section7" class="bookmark_itm">맞포커 하는법</a>
+        <a href="#section8" class="bookmark_itm">파티훌라 하는법</a>
+        <a href="#section9" class="bookmark_itm">LA섯다 하는법</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h1 class="title level_1">포커 하는 법</h1>
+      <p class="desc">포커는 카드를 통해서 조합을 맞추고 이에 따라 베팅을 하는 모든 카드 게임을 의미합니다. 역사가 오래된 만큼 파생된 많은 룰이 있습니다.</p>
+    </div>
+
+    <!-- 목차 -->
+    <div class="section">
+      <div class="index_divide"><span class="txt">목차</span></div>
+      <!-- [D] 참조된 section id값 변경 시 똑같이 변경해주세요. -->
+      <div class="index_lst">
+        <a href="#section1" class="index_itm">포커 게임 기본 룰</a>
+        <a href="#section2" class="index_itm">포커 게임 종류</a>
+      </div>
+      <div class="index_divide"><span class="txt">게임 하는 법</span></div>
+      <!-- [D] 참조된 section id값 변경 시 똑같이 변경해주세요. -->
+      <div class="index_lst">
+        <a href="#section3" class="index_itm">7포커 하는 법</a>
+        <a href="#section4" class="index_itm">로우바둑이 하는 법</a>
+        <a href="#section5" class="index_itm">하이로우 하는 법</a>
+        <a href="#section6" class="index_itm">라스베가스 홀덤 하는 법</a>
+        <a href="#section7" class="index_itm">맞포커 하는 법</a>
+        <a href="#section8" class="index_itm">파티훌라 하는 법</a>
+        <a href="#section9" class="index_itm">LA섯다 하는 법</a>
+      </div>
+    </div>
+
+    <!-- 포커 게임 기본 룰 -->
+    <!-- [D] section에 부여된 id는 임시값이니 변경하셔도 됩니다. -->
+    <section class="section" id="section1">
+      <h2 class="title level_2">포커 게임 기본 룰</h2>
+      <p class="desc">포커는 기본적으로 총 52장의 카드로 즐기는 베팅 게임입니다. 52장의 카드는 2~10, J, Q, K, A의 숫자를 가지고 있습니다. J, Q, K, A는 10보다 높은 숫자를 의미하며 J< Q< K< A 순으로 더 높은 숫자를 의미합니다. 쉽게 생각하면 11, 12, 13, 14 카드라고 볼 수 있습니다.</p>
+      <p class="desc">카드에 적힌 숫자와는 별개로 각 카드는 4개의 무늬를 가지고 있습니다. 바로 ♠, ◆, ♥, ♣입니다. 각각의 무늬는 스페이드, 다이아, 하트, 클로버라고 부릅니다. 13개의 숫자와 4개의 무늬가 조합되기 때문에 포커에는 13 X 4 = 52(개)의 카드가 있는 것입니다.</p>
+      <p class="desc">이 카드들로 각 플레이어는 고유의 카드 조합을 만들게 됩니다. 이를 족보라고 부릅니다. 족보에는 룰 별로 순서가 있으며 좋은 족보를 가지고 있는 사람이 최종 승자가 됩니다. 특정 족보가 나올 확률이 낮을수록 더 좋은 족보입니다. 그렇다면 포커는 좋은 족보를 가지고 있는 사람이 승리하는 운에 기대는 게임일까요? 그렇지 않습니다. 각 플레이어는 룰에 따라서 상대방의 카드를 일부 보지 못하며 그에 따라 확률과 베팅으로 승부하는 두뇌 싸움입니다.</p>
+      <p class="desc">포커는 여러 가지 파생 룰에 따라서 조금씩 규칙이 다릅니다. 이번 글에서는 한게임포커에서 플레이하실 수 있는 다양한 포커의 종류에 대해서 알아보고 각각의 포커를 플레이하는 방법에 대해서 알아보겠습니다.</p>
+    </section>
+
+    <!-- 포커 게임 종류 -->
+    <section class="section" id="section2">
+      <h2 class="title level_2">포커 게임 종류</h2>
+      <p class="desc">한게임포커에서 즐기실 수 있는 포커(파티훌라, LA섯다 제외)에는 5가지가 있습니다.</p>
+      <ul class="dot_lst">
+        <li class="dot_itm">7포커</li>
+        <li class="dot_itm">로우바둑이</li>
+        <li class="dot_itm">하이로우</li>
+        <li class="dot_itm">라스베가스 홀덤</li>
+        <li class="dot_itm">맞포커</li>
+      </ul>
+      <p class="desc">파티훌라와 LA섯다 플레이 방법은 포커 게임 방법 이후에 확인할 수 있습니다.</p>
+    </section>
+
+    <!-- 7포커(세븐포커) 하는법 -->
+    <section class="section" id="section3">
+      <h2 class="title level_2"><span class="txt_point">7포커(세븐포커)</span> 하는 법</h2>
+      <p class="desc">한게임포커에서 즐기실 수 있는 포커(파티훌라, LA섯다 제외)에는 5가지가 있습니다.</p>
+      <figure class="image_box image_box_1">
+        <figcaption class="blind">7포커(세븐포커)하는 법</figcaption>
+      </figure>
+
+      <h3 class="title level_3">1. 3장의 카드 받고, 1장 오픈</h3>
+      <p class="desc">3장을 시작 카드로 받고 1장을 오픈합니다. 받은 3장의 카드 중 원하는 카드를 오픈할 수 있으며 오픈 된 카드는 모든 플레이어에게 보입니다. 이때 오픈하지 않은 패는 게임 끝까지 다른 플레이어들에게 오픈 되지 않으니 어떤 패를 오픈할지 잘 선택하는 것이 중요합니다. 한게임포커에는 편리하게 키보드의 숫자 키로 오픈할 카드를 고를 수 있습니다.</p>
+      <p class="desc">이 단계에서 일반 룰과 초이스 룰로 세부 규칙이 나눠집니다. 아래 표에 나오는 내용을 제외하고는 7포커의 일반룰과 초이스룰은 모든 룰이 같습니다.</p>
+      <figure class="table_box">
+        <table class="table">
+          <colgroup>
+            <col style="width:62px;">
+            <col>
+          </colgroup>  
+          <tr class="table_row">
+            <th class="table_cell">일반룰</th>
+            <td class="table_cell">카드 3장을 받고 1장을 오픈합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">초이스룰</th>
+            <td class="table_cell">카드 4장을 받고 1장을 버리고 1장을 선택해 오픈합니다.</td>
+          </tr>
+        </table>
+      </figure>
+
+      <h3 class="title level_3">2. 4번째 카드 받기, 1차 베팅(4구)</h3>
+      <p class="desc">
+        각 플레이어들이 4번째 카드를 분배 받습니다. 이때 분배 받은 카드는 오픈 합니다.<br>
+        오픈 되어 있는 카드의 족보가 가장 높은 사람이 보스(선)가 됩니다. 베팅의 방향은 선부터 시계방향으로 베팅을 시작합니다. 각 게임방에는 기본 판돈(시드머니)이 설정되어 있으며 기본 판돈 이하의 금액은 베팅할 수 없습니다. 한게임 7포커에서 제공하는 베팅의 방법은 다음과 같습니다.
+      </p>
+      
+      <em class="title level_4">한게임 7포커 베팅 방법</em>
+      <figure class="table_box">
+        <table class="table">
+          <colgroup>
+            <col style="width:50px;">
+            <col>
+          </colgroup>
+          <tr class="table_row">
+            <th class="table_cell">콜</th>
+            <td class="table_cell">앞 사람의 베팅 금액과 동일한 베팅 금액을 겁니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">삥</th>
+            <td class="table_cell">기본 판돈만 베팅합니다.(게임방 보스만 가능)</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">따당</th>
+            <td class="table_cell">앞사람이 베팅한 금액의 2배를 베팅합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">하프</th>
+            <td class="table_cell">전체 판돈의 절반, 즉 50% 금액을 베팅합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">다이</th>
+            <td class="table_cell">새로 베팅하지 않고, 이번 판을 포기합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">체크</th>
+            <td class="table_cell">머니를 베팅하지 않고 다음 카드를 받습니다.(보스만 가능)</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">쿼터</th>
+            <td class="table_cell">전체 판돈의 1/4, 즉 25% 금액을 베팅합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">풀</th>
+            <td class="table_cell">전체 판돈만큼, 판돈의 100% 금액을 베팅 합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">맥스</th>
+            <td class="table_cell">자신의 베팅 한도내의 최대 베팅(최대 38.5억/친구경기장 최대 1.925억)</td>
+          </tr>
+        </table>
+      </figure>
+      <p class="desc">자신의 족보와 상대 방의 오픈 패를 보면서 적절한 금액을 베팅하시면 됩니다. 자신을 제외한 모든 참가자가 이번 판에서 다이를 한다면 승리를 하여 판돈을 가져가게 되므로, 족보가 좋지 않다고 포기할 필요는 없습니다. 적절한 블러핑(허세 전략)를 섞어가면서 베팅을 운용해야 합니다.</p>
+      <p class="desc">한게임 7포커에서는 룰 491과 룰 591을 선택할 수 있습니다. 룰 491은 4구(모든 참가자가 4번째 카드를 받았을 때)의 첫 번째 베팅까지 모든 이용자가 하프 또는 다이만 선택할 수 있습니다. 또한 룰 591은 5구(모든 참가자가 5번째 카드를 받았을 때)의 첫 번째 베팅까지 모든 이용자가 하프 또는 다이만 선택할 수 있습니다.</p>
+      <p class="desc">오픈 되어 있는 카드는 두 장이므로 족보에 따라서 페어를 가진 플레이어가 보스가 됩니다. 페어가 두 명 이상이라면 숫자와 무늬의 우선순위에 따라서 보스가 결정됩니다.</p>
+
+      <h3 class="title level_3">3. 5번째 카드 받기, 2차 베팅(5구)</h3>
+      <p class="desc">
+        각 플레이어들이 5번째 카드를 분배 받습니다. 이때 분배 받은 카드는 오픈 합니다.<br>
+        1차 베팅과 같은 방식으로 베팅을 진행합니다. 보스는 오픈 된 세 개의 카드를 비교하여 결정합니다. 이때 나올 수 있는 족보의 최고 조합은 트리플입니다.
+      </p>
+
+      <h3 class="title level_3">4. 6번째 카드 받기, 3차 베팅(6구)</h3>
+      <p class="desc">
+        각 플레이어들이 6번째 카드를 분배 받습니다. 이때 분배 받은 카드는 오픈 합니다.<br>
+        1차 베팅과 같은 방식으로 베팅을 진행합니다. 이때 받는 카드는 오픈합니다. 보스는 오픈 된 네 개의 카드를 비교하여 결정합니다. 이때 나올 수 있는 족보의 최고 조합은 포카드입니다.
+      </p>
+
+      <h3 class="title level_3">5. 히든카드 받기</h3>
+      <p class="desc">7번째 카드를 받습니다. 이전의 카드 분배와는 다르게 이 카드는 오픈하지 않습니다. 오픈하지 않는 마지막 카드를 히든카드라고 합니다. 히든카드는 자신을 제외한 다른 플레이어들이 알 수 없기 때문에 자신의 최종 베팅에 중요한 요소입니다.</p>
+
+      <h3 class="title level_3">6. 최종 베팅(7구)</h3>
+      <p class="desc">각 플레이어는 히든카드 3장과 오픈 카드 4장, 총 7장의 카드를 가지게 됩니다. 7장의 카드로 자신의 족보가 완성된 상태이며 상대방의 오픈 카드를 보고 베팅 여부를 결정합니다. 최종 베팅에서 블러핑 전략을 쓰는 경우가 많으니 경우의 수를 최대한 계산하여 베팅을 결정해야 합니다.</p>
+
+      <h3 class="title level_3">7. 히든 오픈</h3>
+      <p class="desc">다이를 하지 않고 끝까지 최종 베팅을 진행한 플레이어들끼리 히든카드를 오픈합니다. 각 플레이어가 가진 7장의 카드 중에 가장 좋은 족보를 구성할 수 있는 5장의 카드로 승패를 결정합니다. 가장 좋은 족보를 가진 한 명의 플레이어가 모든 판돈을 가집니다.</p>
+    </section>
+
+    <!-- 로우바둑이 하는법 -->
+    <section class="section" id="section4">
+      <h2 class="title level_2"><span class="txt_point">로우바둑이</span> 하는 법</h2>
+      <figure class="image_box image_box_2">
+        <figcaption class="blind">로우바둑이 게임 진행 단계</figcaption>
+      </figure>
+      <p class="desc">
+        바둑이는 한국에서 유래한 것으로 추측되는 포커의 한 종류입니다. 현재 바둑이는 전 세계에서 플레이 되고 있습니다.
+        2~10, J, Q, K, A의 숫자를 가진 각 4종류 무늬의 카드 총 52장으로 플레이하며 각자 4장의 카드를 받아 서로 보지 않고 다른 무늬, 낮은 숫자로 4장을 맞춰 메이드를 만드는 게임입니다.
+        로우바둑이의 족보에 대해서는 '<a href="./02_guide_jokbo.html" target="_blank" rel="noreferrer noopener class=" class="txt_link">포커 족보</a>' 글을 참고해 주세요.
+      </p>
+
+      <h3 class="title level_3">1. 4장의 히든 카드 받기</h3>
+      <p class="desc">4장의 카드를 받습니다. 이 카드들은 자신만 볼 수 있는 카드입니다.</p>
+
+      <h3 class="title level_3">2. 1차 베팅</h3>
+      <p class="desc">
+        한게임포커에서는 자신만 볼 수 있는 4장의 히든카드에 근거하여 베팅을 진행합니다. 이를 블라인드 베팅이라고 합니다.<br>
+        로우바둑이에서 베팅을 할 수 있는 방법은 다음과 같습니다.
+      </p>
+      
+      <em class="title level_4">한게임 로우바둑이 베팅 방법</em>
+      <figure class="table_box">
+        <table class="table">
+          <colgroup>
+            <col style="width:50px;">
+            <col>
+          </colgroup>
+          <tr class="table_row">
+            <th class="table_cell">콜</th>
+            <td class="table_cell">앞 사람의 베팅 금액과 동일한 베팅 금액을 겁니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">삥</th>
+            <td class="table_cell">기본 판돈만 베팅합니다.(게임방 보스만 가능)</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">따당</th>
+            <td class="table_cell">앞사람이 베팅한 금액의 2배를 베팅합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">하프</th>
+            <td class="table_cell">전체 판돈의 절반, 즉 50% 금액을 베팅합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">다이</th>
+            <td class="table_cell">새로 베팅하지 않고, 이번 판을 포기합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">체크</th>
+            <td class="table_cell">머니를 베팅하지 않고 다음 카드를 받습니다.(보스만 가능)</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">쿼터</th>
+            <td class="table_cell">전체 판돈의 1/4, 즉 25% 금액을 베팅합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">맥스</th>
+            <td class="table_cell">자신의 베팅 한도내의 최대 베팅(최대 38.5억/친구경기장 최대 1.925억)</td>
+          </tr>
+        </table>
+      </figure>
+
+      <h3 class="title level_3">3. 1차 카드 교환(아침)</h3>
+      <p class="desc">자신이 가진 히든 카드에서 개수를 자유롭게 선택하여 교환을 합니다. 이때 교환은 플레이어와 하는 것이 아니고 카드 더미에서 받습니다. 4개 모두를 교체할 수도 있고, 모든 카드를 교체하지 않을 수도 있습니다. 로우바둑이 족보에 따라서 같은 무늬의 카드와 높은 숫자 카드를 우선적으로 교체하는 것을 고려해 볼 수 있습니다. 교환에 따른 포커 용어는 다음과 같습니다.</p>
+      
+      <em class="title level_4">한게임 로우바둑이 카드 교환 용어</em>
+      <figure class="table_box">
+        <table class="table">
+          <colgroup>
+            <col style="width:50px;">
+            <col>
+          </colgroup>
+          <tr class="table_row">
+            <th class="table_cell">패스</th>
+            <td class="table_cell">카드를 한 장도 바꾸지 않습니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">박스</th>
+            <td class="table_cell">카드를 네 장 모두 바꿉니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">커트</th>
+            <td class="table_cell">카드를 1또는 2또는 3장을 바꿀 때, 원커트, 투커트, 쓰리커트 등으로 부릅니다.</td>
+          </tr>
+        </table>
+      </figure>
+      <p class="desc">한게임 로우바둑이에는 아침벳, 점심벳 룰이 있습니다. 방장이 아침벳을 베팅룰로 선택한 경우, 아침 교환 전 첫번째 베팅까지는 모두 하프 또는 다이만 선택합니다. 방장이 점심벳을 베팅룰로 선택한 경우, 아침 교환 후 첫 번째 베팅까지는 모두 하프 또는 다이만 선택할 수 있습니다.</p>
+
+      <h3 class="title level_3">4. 2차 베팅, 2차 카드 교환(점심)</h3>
+      <p class="desc">1차 베팅, 1차 카드 교환과 동일하게 진행합니다.</p>
+      
+      <h3 class="title level_3">5. 3차 베팅, 3차 카드 교환(저녁)</h3>
+      <p class="desc">1차 베팅, 1차 카드 교환과 동일하게 진행합니다.</p>
+
+      <h3 class="title level_3">6. 최종 베팅</h3>
+      <p class="desc">자신에게만 보이는 4개의 히든 카드로 최종 베팅을 진행합니다. 추가적으로 상대방의 교환 양상을 고려하여 베팅에 반영할 수 있습니다.</p>
+
+      <h3 class="title level_3">7. 히든 오픈</h3>
+      <p class="desc">이전의 베팅까지 다이를 하지 않은 플레이어들끼리 히든 카드를 오픈합니다. 4장의 카드로 구성할 수 있는 족보로 승패를 결정합니다. 가장 좋은 족보를 가진 한 명의 플레이어가 모든 판돈을 가집니다.</p>
+    </section>
+
+    <!-- 하이로우 하는법 -->
+    <section class="section" id="section5">
+      <h2 class="title level_2"><span class="txt_point">하이로우</span> 하는 법</h2>
+      <figure class="image_box image_box_3">
+        <figcaption class="blind">하이로우 게임 진행 단계</figcaption>
+      </figure>
+      <p class="desc">하이로우의 게임 방법은 기본적으로 7포커와 동일합니다. 다만 마지막 최종 베팅 단계에서 하이/로우/스윙을 선택하여 베팅하는 것이 다른 점입니다.</p>
+      <p class="desc">한게임 하이로우에서 제공하는 베팅 방법은 아래와 같습니다.</p>
+      
+      <em class="title level_4">한게임 하이로우 베팅 방법</em>
+      <figure class="table_box">
+        <table class="table">
+          <colgroup>
+            <col style="width:50px;">
+            <col>
+          </colgroup>
+          <tr class="table_row">
+            <th class="table_cell">콜</th>
+            <td class="table_cell">앞 사람의 베팅 금액과 동일한 베팅 금액을 겁니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">삥</th>
+            <td class="table_cell">기본 판돈만 베팅합니다.(게임방 보스만 가능)</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">따당</th>
+            <td class="table_cell">앞사람이 베팅한 금액의 2배를 베팅합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">하프</th>
+            <td class="table_cell">전체 판돈의 절반, 즉 50% 금액을 베팅합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">다이</th>
+            <td class="table_cell">새로 베팅하지 않고, 이번 판을 포기합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">체크</th>
+            <td class="table_cell">머니를 베팅하지 않고 다음 카드를 받습니다.(보스만 가능)</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">쿼터</th>
+            <td class="table_cell">전체 판돈의 1/4, 즉 25% 금액을 베팅합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">맥스</th>
+            <td class="table_cell">자신의 베팅 한도내의 최대 베팅(최대 38.5억/친구경기장 최대 1.925억)</td>
+          </tr>
+        </table>
+      </figure>
+
+      <h3 class="title level_3">하이, 로우, 스윙이란?</h3>
+      <em class="title level_4">하이</em>
+      <p class="desc">일반 포커에서 사용하는 ‘기본 족보’를 뜻합니다.</p>
+      
+      <em class="title level_4">로우</em>
+      <p class="desc">
+        하이와 반대의 기준으로 패 순위를 따집니다. 즉, 포커 족보에서 패가 낮을수록 높은 패가 됩니다.<br>
+        무늬를 따지는 방식 역시 반대입니다.( ♣ > ♥ > ◆ > ♠ )<br>
+        ‘A’는 로우에서 가장 낮은 숫자입니다. 그래서 로우족보 중 가장 높은 패는 ‘A, 2, 3, 4, 6(6탑)’입니다.<br>
+        가장 좋은 패 순으로 보자면 ‘6탑 > 7탑 > 8탑 > 9탑 > 10탑 > J탑 > Q탑 > K탑 > K탑 미만’ 입니다.
+      </p>
+      
+      <em class="title level_4">스윙</em>
+      <p class="desc">
+        하이/로우 양쪽 모두 높은 족보가 나와 둘 다 선택할 경우를 뜻합니다.<br>
+        스윙을 선택하여, 양쪽 모두에서 이길 경우 혼자서 걸린 판돈을 다 갖지만 어느 한 쪽에서 진 경우에는 자신을 이긴 사람이 판돈을 다 갖습니다. 만약 하이와 로우 각각에서 스윙 승자가 나오면 판돈을 반씩 나눕니다.<br>
+        (단, 포카드 이상에는 스윙버튼만 활성화가 되며, 포카드 보다 높은 패를 가진 경우에만 스윙으로 경합하여 이길 수 있습니다)
+      </p>
+
+      <h3 class="title level_3">하이, 로우, 스윙 베팅 하는 법</h3>
+      <p class="desc">하이로우는 각각 하이 족보와 로우 족보를 가지고 있습니다. 하이 족보는 기존 7포커 족보와 같습니다. 로우 족보는 기존 7포커 족보의 역순이라고 생각하시면 됩니다. 따라서 아무 조합도 나오지 않는 탑 족보 중에 가장 낮은 6탑이 로우 족보에서는 가장 높은 족보입니다.</p>
+      <p class="desc">또한 하이로우에는 스윙 베팅이라는 개념도 있습니다. 만약 자신이 포카드 이상(기존 족보 순위 기준)의 패를 가지고 있을 때는 스윙만 선택할 수 있습니다. 스윙에 베팅을 하면 주어진 7장의 카드를 조합하여 하이와 로우 족보에서 모두 승리를 해야 최종적으로 승리한 것이 됩니다.</p>
+
+      <h3 class="title level_3">하이, 로우, 스윙 Q&A</h3>
+      <ul class="qna_lst">
+        <li class="qna_itm"><p>스윙을 하게 되는 경우, 하이/로우 족보는 각각 어떻게 형성되나요?</p></li>
+        <li class="qna_itm">
+          <p>로우 족보가 동시에 하이 족보를 형성하게 되는 경우에는 그대로 인정되지 않으며, 그 다음 숫자를 기준으로 로우 족보를 형성하게 됩니다.</p>
+          <p>예를 들어,*♥A ◆2 ◆3 ♣4 ♥5 ♥9 ♣10 일 때, A, 2, 3, 4, 5는 스트레이트 하이족보가 형성되고 5를 제외한 1, 2, 3, 4, 9가 로우패로 선택되어 로우족보는 9탑이 됩니다.</p>
+          <p>*♥A ♥2 ♥3 ♥4 ♥6 ♥8 ♥K일 때는 하이족보와 로우족보 모두 ♥플러시가 되므로, 이때는 하이를 선택하는 것이 유리합니다.</p>
+        </li>
+      </ul>
+      <ul class="qna_lst">
+        <li class="qna_itm"><p>스윙을 한 사람이 하이/로우를 부른 사람에게 질 경우 어떻게 되나요?</p></li>
+        <li class="qna_itm"><p>스윙을 한 사람이 하이나 로우를 부른 사람에게 질 경우 무조건 승부에서 탈락되며, 하이나 로우를 부른 사람 중 스윙패와 비교하여 스윙패를 이긴 사람이 판돈을 독식하게 됩니다.</p></li>
+      </ul>
+      <ul class="qna_lst">
+        <li class="qna_itm"><p>두 명 이상이 스윙을 하고 하이/로우 양쪽을 모두 이기지 못하면 어떻게 되나요?</p></li>
+        <li class="qna_itm"><p>두 명 이상이 스윙을 하고 이 중, 하이/로우 양쪽을 이기는 사람이 없을 경우 하이의 최고 패를 가진 사람과 로우의 최고 패를 가진 사람이 판돈을 나누게 됩니다.</p></li>
+      </ul>
+    </section>
+
+    <!-- 라스베가스 홀덤 하는 법 -->
+    <section class="section" id="section6">
+      <h2 class="title level_2"><span class="txt_point">라스베가스 홀덤</span> 하는 법</h2>
+      <p class="desc">
+        홀덤은 커뮤니티 카드 포커 게임으로 인 핸드 2장과 커뮤니티 카드 5장으로 족보를 맞춰 높은 쪽이 승리하는 게임입니다. 외국에서는 대표적인 포커 종목으로 자리잡았으며, 텍사스 홀덤, 오마하 홀덤, 파인애플 홀덤 등이 있습니다.<br>
+        한게임포커 라스베가스 홀덤에서는 일반 룰, 초이스 룰, 조커 룰, 홀덤 룰을 플레이할 수 있습니다.
+      </p>
+      <figure class="table_box margin_big">
+        <table class="table">
+          <colgroup>
+            <col style="width:60px;">
+            <col>
+          </colgroup>
+          <tr class="table_row">
+            <th class="table_cell">일반룰</th>
+            <td class="table_cell">카드 3장을 받고 1장을 오픈합니다. 7포커와 같습니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">초이스룰</th>
+            <td class="table_cell">카드 4장을 받고 1장을 버리고 1장을 선택해 오픈합니다.7포커와 같습니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">조커룰</th>
+            <td class="table_cell">스트레이트를 만들 수 있는 S카드, 플러쉬를 만들 수 있는 F카드, 포카드와 트리플을 만들 수 있는 TF카드 등 총 3가지의 조커 카드를 이용하여 더 높은 족보를 만들 수 있습니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">홀덤룰</th>
+            <td class="table_cell">카드 2장을 받고 모두가 공통으로 사용하는 5장의 카드가 주어집니다. 텍사스 홀덤 룰을 따릅니다.</td>
+          </tr>
+        </table>
+      </figure>
+
+      <p class="desc margin_big">아래부터는 한게임 라스베가스 홀덤에서 가장 많이 플레이 되는 홀덤 룰에 대한 설명입니다.</p>
+
+      <figure class="image_box image_box_4 margin_big">
+        <figcaption class="blind">라스베가스 홀덤 게임 진행 단계</figcaption>
+      </figure>
+
+      <h3 class="title level_3">1. 포켓 카드 받기, 1차 베팅</h3>
+      <p class="desc">
+        각 플레이어들이 2장의 카드를 분배 받습니다. 이렇게 받은 카드는 ‘포켓 카드’ 혹은 ‘홀 카드’라고도 합니다. 이때 분배 받은 카드는 오픈하지 않습니다.<br>
+        홀덤은 선(보스)을 돌아가면서 하며, 베팅의 방향은 선부터 시계방향으로 베팅을 시작합니다. 마지막 순서의 플레이어에게는 딜러 버튼이 주어져 베팅 순서를 표시합니다.<br>
+        각 게임방에는 기본 판돈(시드머니)이 설정되어 있으며 기본 판돈 이하의 금액은 베팅할 수 없습니다. 한게임 라스베가스 홀덤에서 제공하는 베팅의 방법은 다음과 같습니다.
+      </p>
+      
+      <em class="title level_4">한게임 라스베가스 홀덤 베팅 방법</em>
+      <figure class="table_box">
+        <table class="table">
+          <colgroup>
+            <col style="width:50px;">
+            <col>
+          </colgroup>
+          <tr class="table_row"> 
+            <th class="table_cell">콜</th>
+            <td class="table_cell">앞 사람의 베팅 금액과 동일한 베팅 금액을 겁니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">삥</th>
+            <td class="table_cell">기본 판돈만 베팅합니다.(게임방 보스만 가능)</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">따당</th>
+            <td class="table_cell">앞사람이 베팅한 금액의 2배를 베팅합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">하프</th>
+            <td class="table_cell">전체 판돈의 절반, 즉 50% 금액을 베팅합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">다이</th>
+            <td class="table_cell">새로 베팅하지 않고, 이번 판을 포기합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">체크</th>
+            <td class="table_cell">머니를 베팅하지 않고 다음 카드를 받습니다.(보스만 가능)</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">맥스</th>
+            <td class="table_cell">자신의 베팅 한도내의 최대 베팅(최대 38.5억/친구경기장 최대 1.925억)</td>
+          </tr>
+        </table>
+      </figure>
+
+      <h3 class="title level_3">2. 플롭 카드 오픈, 2차 베팅</h3>
+      <p class="desc">
+        모두가 공통으로 사용할 5장의 카드가 차례로 오픈됩니다. 공통카드 5장을 ‘커뮤니티 카드’라고 하며, 1차 베팅 이후 오픈되는 공통의 카드 3장을 ‘플롭 카드’라고 합니다.<br>
+        플롭 카드 오픈 후 두번째 베팅을 진행합니다. 베팅 방법은 1차 베팅과 같습니다.
+      </p>
+
+      <h3 class="title level_3">3. 턴 카드 오픈, 3차 베팅</h3>
+      <p class="desc">커뮤니티 카드 중 4번째 카드를 ‘턴 카드’라고 합니다. 4번째 카드 오픈 후 세번째 베팅을 진행합니다.</p>
+
+      <h3 class="title level_3">4. 리버 카드 오픈, 최종 베팅</h3>
+      <p class="desc">
+        공통으로 받는 마지막 5번째 카드를 ‘리버 카드’라고 합니다. 5번째 카드 오픈 후 최종 베팅을 진행합니다.<br>
+        각 플레이어는 포켓 카드 2장과 커뮤니티 카드 5장을 조합하여 총 7장의 카드로 족보를 완성하고 커뮤니티 카드를 보고 최종 베팅 여부를 결정합니다.
+      </p>      
+
+      <h3 class="title level_3">5. 포켓 카드 오픈</h3>
+      <p class="desc">
+        다이를 하지 않고 끝까지 최종 베팅을 진행한 플레이어들끼리 포켓 카드를 오픈합니다. 각 플레이어가 가진 7장의 카드 중에 가장 좋은 족보를 구성할 수 있는 5장의 카드로 승패를 결정합니다.<br>
+        가장 좋은 족보를 가진 한 명의 플레이어가 모든 판돈을 가집니다. 다만 홀덤은 무늬를 비교하지 않아 비기는 경우가 종종 발생할 수 있습니다. 우열을 가릴 수 없어 판돈을 나누어 가지게 되며, 이런 경우를 스플리트(Split)라고 합니다. 단, 족보를 비교하는 5장의 카드 숫자가 모두 같아야 합니다.
+      </p>
+    </section>
+
+    <!-- 맞포커 하는법 -->
+    <section class="section" id="section7">
+      <h2 class="title level_2"><span class="txt_point">맞포커</span> 하는 법</h2>
+      <p class="desc">맞포커는 7포커와 동일한 방식으로 2명이 1:1 게임을 진행합니다. 맞포커를 하는 방법은 7포커와 완전히 동일합니다.</p>
+    </section>
+
+    <!-- 파티훌라 하는법 -->
+    <section class="section" id="section8">
+      <h2 class="title level_2"><span class="txt_point">파티훌라</span> 하는 법</h2>
+      <figure class="image_box image_box_5">
+        <figcaption class="blind">훌라 게임 진행 단계</figcaption>
+      </figure>
+      <p class="desc">한게임의 파티훌라는 7장의 카드를 가지고 시작하여 계속 버리는 단계를 거쳐서 숫자의 합을 낮추는 게임입니다. 손에 든 카드의 총점이 가장 낮은 사람이 우승자가 됩니다. 자신의 손에 든 카드의 합이 다른 사람보다 낮다고 판단되면 '스톱'을 선언할 수 있습니다.</p>
+
+      <h3 class="title level_3">1. 7장의 카드 받기</h3>
+      <p class="desc">7장의 카드를 나눠 받습니다. 이 카드들은 자신에게만 공개되고 다른 사람들은 볼 수 없습니다.</p>
+
+      <h3 class="title level_3">2. 훌라의 턴 진행</h3>
+      <p class="desc">
+        한게임 포커에서는 방을 만든 사람을 선으로 시계방향으로 턴을 잡습니다.<br>
+        턴을 잡은 플레이어는 3가지 행동을 합니다.
+      </p>
+      <ul class="dot_lst">
+        <li class="dot_itm">카드 한 장 받기</li>
+        <li class="dot_itm">카드 등록하기 / 붙이기</li>
+        <li class="dot_itm">카드 한 장 버리기</li>
+      </ul>
+      <p class="desc">모든 플레이어는 자신의 차례에 카드를 한 장씩 받습니다. 카드를 받은 다음에는 카드를 등록할 수 있습니다. 카드를 등록할 수 있는 상황은 다음의 세 가지가 있습니다.</p>
+      
+      <em class="title level_4">훌라 카드 등록</em>
+      <ol class="num_lst">
+        <li class="num_itm">같은 숫자 세 장 이상의 카드 (예 : ♠3, ♥3, ♣3)</li>
+        <li class="num_itm">같은 무늬로 연속된 세 장 이상의 카드(예:♥3, ♥4, ♥5)</li>
+        <li class="num_itm">모든 무늬의 7</li>
+      </ol>
+      <p class="desc">등록은 한 번에 여러 개를 할 수 있으며 등록할 수 있는 카드가 있어도 원하지 않는다면 등록을 하지 않아도 됩니다.</p>
+      
+      <em class="title level_4">훌라 조커룰</em>
+      <p class="desc">훌라를 진행하면서 조커를 포함하여 진행할 때가 있습니다. 조커룰로 훌라를 진행할 때는 조커는 아무 카드에 붙여서 등록을 해도 됩니다.</p>
+      
+      <em class="title level_4">훌라 땡큐</em>
+      <p class="desc">모든 플레이어는 턴을 마칠 때 반드시 한 개의 카드를 버려야 합니다. 앞사람이 버린 카드가 나의 등록에 필요한 카드라면 '땡큐'를 외치며 해당 카드를 사용하여 등록할 수 있습니다. 땡큐를 할 수 있는 타이밍은 정통 훌라와 전투 훌라의 규칙이 다릅니다.</p>
+      
+      <em class="title level_4">정통 훌라와 전투 훌라의 차이</em>
+      <figure class="table_box">
+        <table class="table">
+          <colgroup>
+            <col style="width:68px;">
+            <col>
+          </colgroup>
+          <tr class="table_row"> 
+            <th class="table_cell">전통 훌라</th>
+            <td class="table_cell">앞 사람이 버린 카드에 대해서 자기 순서에서만 땡큐가 가능합니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">전투 훌라</th>
+            <td class="table_cell">순서에 상관없이 버려진 카드를 땡큐로 가져갈 수 있습니다.</td>
+          </tr>
+        </table>
+      </figure>
+      
+      <em class="title level_4">훌라 카드 붙이기</em>
+      <p class="desc">만약 한 번이라도 등록 또는 땡큐를 했다면 자신 또는 상대방이 등록한 카드에 카드를 추가로 붙일 수 있습니다. 같은 무늬의 스트레이트에 붙이거나 같은 숫자카드에 붙일 수 있습니다.</p>
+
+      <h3 class="title level_3">3.훌라 게임 종료</h3>
+
+      <em class="title level_4">일반적인 훌라 종료</em>
+      <p class="desc">한 번에 모든 카드를 내려놓는 행위를 훌라라고 합니다. 훌라로 손안에 카드를 다 덜어버린 플레이어가 있다면 그 즉시 게임이 종료되고 해당 플레이어가 우승자가 됩니다. 등록을 일찍 했을 때 상대방이 나의 등록 카드를 활용할 수 있기 때문에 카드를 모아서 내 턴이 왔을 때 한 번에 끝내는 전략을 활용할 수 있습니다. 하지만 조기 게임 종료 규칙이 있기 때문에 이를 잘 고려해서 등록의 타이밍을 결정해야 합니다.</p>
+      
+      <em class="title level_4">조기 훌라 종료</em>
+      <p class="desc">자신의 차례에 손에 들고 있는 카드의 숫자 합이 다른 사람들보다 적을 것이라고 예상한다면 '스톱'을 외칠 수 있습니다. 스톱을 외치는 순간 게임은 종료되고, 손에 가진 카드의 숫자가 제일 적은 사람이 승리하게 됩니다.</p>
+
+      <em class="title level_4">한게임 파티훌라 순위 결정 기준</em>
+      <figure class="table_box">
+        <table class="table">
+          <colgroup>
+            <col style="width:65px;">
+            <col>
+          </colgroup>
+          <tr class="table_row">
+            <th class="table_cell">족보스톱</th>
+            <td class="table_cell">족보로 스톱했으면 무조건 1등입니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">미등록박</th>
+            <td class="table_cell">등록하지 않았을 경우(미등록)에는 무조건 꼴찌입니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">스톱박</th>
+            <td class="table_cell">스톱했을 때는 등록한 사람 중에 스톱한 사람보다 점수가 낮은 사람이 있으면 스톱한 사람이 독박입니다. 독박쓰면 무조건 꼴찌입니다. 등록하지 않은 사람은 해당되지 않습니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">땡큐박</th>
+            <td class="table_cell">자신이 버린 카드로 땡큐를 하여 상대가 그 턴에 이겼을 시에는 독박과 마찬가지로 꼴찌가 됩니다.</td>
+          </tr>
+        </table>
+      </figure>
+    </section>
+
+    <!-- LA섯다 하는법 -->
+    <section class="section" id="section9">
+      <h2 class="title level_2"><span class="txt_point">LA섯다</span> 하는 법</h2>
+      <p class="desc">LA섯다는 A, 2~10의 숫자를 가진 스페이드와 다이아몬드 카드 총 20장으로 게임을 진행하며 스페이드 A, 3, 8은 화투의 광(光)패와 같은 역할을 합니다.</p>
+      <p class="desc">2장 룰과 3장 룰이 있으며 차이는 아래와 같습니다.</p>
+      <figure class="table_box">
+        <table class="table">
+          <colgroup>
+            <col style="width:60px;">
+            <col>
+          </colgroup>
+          <tr class="table_row">
+            <th class="table_cell">2장 룰</th>
+            <td class="table_cell">카드 1장을 받고 오픈하지 않습니다.</td>
+          </tr>
+          <tr class="table_row">
+            <th class="table_cell">3장 룰</th>
+            <td class="table_cell">카드 2장을 받고 1장 오픈합니다.</td>
+          </tr>
+        </table>
+      </figure>
+
+      <h3 class="title level_3">1. 2장 룰</h3>
+      <figure class="image_box image_box_6">
+        <figcaption class="blind">LA섯다 2장 룰 진행 단계</figcaption>
+      </figure>
+
+      <em class="title level_4">첫번째 히든 카드 받기, 1차 베팅</em>
+      <p class="desc">2장 룰에서는 모든 카드를 오픈하지 않으며, 첫번째 카드를 받은 후 베팅을 진행합니다.</p>
+
+      <em class="title level_4">두번째 히든 카드 받기, 최종 베팅</em>
+      <p class="desc">두번째 히든 카드를 받고 최종 베팅을 진행합니다.</p>
+
+      <em class="title level_4">히든 오픈</em>
+      <p class="desc">이전의 베팅까지 다이를 하지 않은 플레이어들끼리 히든 카드를 오픈합니다. 2장의 카드로 구성할 수 있는 족보로 승패를 결정합니다. 가장 좋은 족보를 가진 한 명의 플레이어가 모든 판돈을 가집니다.</p>
+      <p class="desc">2장 룰은 간단한 방식이지만 그만큼 심리전이 더 중요합니다. 빠른 게임을 즐기는 성향이라면 2장 룰을 추천드립니다.</p>
+
+      <h3 class="title level_3">2. 3장 룰</h3>
+      <figure class="image_box image_box_7">
+        <figcaption class="blind">LA섯다 3장 룰 진행 단계</figcaption>
+      </figure>
+
+      <em class="title level_4">2장의 카드 받고 1장 오픈, 1차 베팅</em>
+      <p class="desc">3장 룰에서는 카드를 2장 받고 그 중 1장을 오픈합니다. 이후 1차 베팅을 진행합니다.</p>
+
+      <em class="title level_4">두번째 히든 카드 받기, 최종 베팅</em>
+      <p class="desc">두번째 히든 카드를 받고 최종 베팅을 진행합니다.</p>
+
+      <em class="title level_4">히든 오픈</em>
+      <p class="desc">이전의 베팅까지 다이를 하지 않은 플레이어들끼리 히든 카드를 오픈합니다. 3장의 카드 중 2장의 카드로 구성할 수 있는 가장 좋은 족보를 선택하여 승패를 결정합니다.</p>
+      <p class="desc">3장 룰은 높은 족보의 등장 확률이 높습니다. 그러나 상대방도 같은 조건임을 명심하여 베팅해야 합니다.</p>
+    </section>
+      
+    <div class="section">
+      <p class="desc">
+        이 글에서는 다양한 포커의 종류와 파생된 룰에 대해서 알아보았습니다. 한게임포커에서는 설명드린 모든 포커를 플레이하실 수 있으며,<br>
+        모바일에서는
+        <a href="javascript:;" target="_blank" rel="noreferrer noopener" class="txt_link">모바일 한게임포커 클래식</a>에서
+        <strong class="txt_underline">PC <a href="https://poker.hangame.com/" target="_blank" rel="noreferrer noopener" class="txt_link">한게임포커</a>(poker.hangame.com)</strong>의 재미 그대로를 경험하실 수 있습니다.<br>
+        손에 땀을 쥐게 하는 치열한 포커 게임, 지금 한게임포커에서 만나보세요.
+      </p>
+    </div>
+
+    <!-- [D] Top 버튼 -->
+    <a href="#wrap" class="btn_top ico arrow_top" role="button" style="display:none;"><span class="blind">맨 위로</span></a>
+  </main>
+
+  <!-- [D] footer -->
+  <?php include 'include/footer.html'?>
+
+</div>
+
+<!-- [D] case view / [D] 마크업 확인용, 개발 시 삭제 부탁드립니다. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="한게임포커에서 기본 7포커, 하이로우, 라스베가스홀덤, 포커 족보, 로우바둑이 포커 족보와 확률, 카드 순위에 대해 알아보세요!">
+<title>포커 족보 정리 - 확률, 순위, 높은 순서, 카드 순서 | 한게임포커</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<!-- [D] body에 .scroll_lock 클래스 추가 시 스크롤 제한 -->
+<body>
+<!-- [D] 전페이지 공통 건너뛰기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+
+<!-- [D] wrap -->
+<div id="wrap" class="wrap">
+
+	<!-- [D] header & gnb -->
+  <?php include 'include/header_gnb.html'?>
+
+  <!-- [D] content -->
+  <main id="content" class="content content_sub guide">
+
+    <!-- [D] LNB 영역 : lnb 스크롤 고정 시 is_fixed 클래스 추가 -->
+    <div class="lnb">
+      <ul class="lnb_lst">
+        <li class="lnb_itm is_selected"><a href="./02_guide_jokbo.html" class="lnb_link"><span class="txt">포커 족보</span></a></li>
+        <li class="lnb_itm"><a href="./02_guide_rule.html" class="lnb_link"><span class="txt">게임 방법과 규칙</span></a></li>
+        <li class="lnb_itm"><a href="./02_guide_strategy.html" class="lnb_link"><span class="txt">포커 게임 전략</span></a></li>
+      </ul>
+      <!-- [D] 참조된 section id값 변경 시 똑같이 변경해주세요. -->
+      <div class="bookmark_lst">
+        <a href="#section1" class="bookmark_itm is_selected">카드 순서 및 서열</a>
+        <a href="#section2" class="bookmark_itm">포커 족보</a>
+        <a href="#section3" class="bookmark_itm">포커 족보(로우바둑이)</a>
+        <a href="#section4" class="bookmark_itm">섯다 족보(LA섯다)</a>
+      </div>
+    </div>
+
+    <section class="section">
+      <h1 class="title level_1">포커 족보 순위</h1>
+      <p class="desc">포커는 조커를 제외하고 총 52장의 트럼프 카드를 사용하며, 트럼프 카드의 조합과 순위를 가지고 승패를 겨루는 게임입니다.</p>
+    </section>
+
+    <!-- 목차 -->
+    <section class="section">
+      <div class="index_divide"><span class="txt">목차</span></div>
+      <!-- [D] 참조된 section id값 변경 시 똑같이 변경해주세요. -->
+      <div class="index_lst">
+        <a href="#section1" class="index_itm">카드 순서 및 서열</a>
+        <a href="#section2" class="index_itm">포커 족보<span class="tag">7포커 / 하이로우 / 라스베가스 홀덤 / 맞포커</span></a>
+        <a href="#section3" class="index_itm">포커 족보<span class="tag">로우바둑이</span></a>
+        <a href="#section4" class="index_itm">섯다 족보<span class="tag">LA섯다</span></a>
+      </div>
+    </section>
+
+    <!-- 카드 순서 및 서열 -->
+    <!-- [D] section에 부여된 id는 임시값이니 변경하셔도 됩니다. -->
+    <section class="section" id="section1"> 
+      <h2 class="title level_2">카드 순서 및 서열</h2>
+      <p class="desc">포커 족보를 알기 전, 카드 조합 내에서 카드의 서열을 파악하기 위해서는 숫자와 무늬별 순서를 먼저 확인하세요.</p>
+      
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">숫자 순서</h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_guide_1.png" width="264" alt="포커 카드 숫자 순서">
+          </figure>
+          <p class="jokbo_desc">포커에서는 숫자가 가장 작은 <strong>2가 제일 낮은 카드이고, 그 다음 순서대로 10, Jack, Queen, King, Ace 카드의 순서</strong>로 서열이 존재합니다. Ace 카드는 일반적으로 가장 가치가 높은 카드지만, 숫자 1로도 사용할 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">무늬 순서</h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_guide_2.png" width="232" alt="카드 무늬 순서">
+          </figure>
+          <p class="jokbo_desc">포커에서는 무늬에 따라 카드의 서열이 다릅니다. 일반적으로 <strong>스페이드, 다이아몬드, 하트, 클로버 순</strong>으로 무늬를 배열합니다.</p>
+          </div>
+      </div>
+    </section>
+
+    <!-- 포커 족보 (7포커/하이로우/라스베가스 홀덤/맞포커) -->
+    <section class="section" id="section2">
+      <h2 class="title level_2">포커 족보<span class="title_sub">7포커/하이로우/라스베가스 홀덤/맞포커</span></h2>
+      <p class="desc">
+        포커 족보란 52장의 카드에서 <strong>5장의 카드 조합에 따라 높은 패와 낮은 패를 정하는 기준</strong>을 말합니다.<br>
+        등장할 <strong>확률이 낮을수록 높은 족보이고, 등장할 확률이 높을수록 낮은 족보</strong>입니다.<br>
+        카드의 족보는 높은 족보부터 낮은 족보 순으로 설명하겠습니다.
+      </p>      
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">로얄 스트레이트 플러쉬 <span class="txt_wrap">Royal Straight flush</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_1.png" width="231" alt="한게임포커 로얄 스트레이트 플러쉬">
+          </figure>
+          <p class="jokbo_desc"><strong>로얄 스트레이트 플러쉬</strong>란 5장의 무늬가 같으며 A, K, Q, J, 10으로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc"><strong>로얄 플러쉬</strong>라고 칭하기도 하고, 한국에서는 <strong>로티플</strong>이라고 축약해서 부르기도 합니다.</p>
+          <p class="jokbo_desc">포커에서 가장 높은 족보입니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">백 스트레이트 플러쉬 <span class="txt_wrap">Back Straight flush</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_2.png" width="231" alt="한게임포커 백 스트레이트 플러쉬">
+          </figure>
+          <p class="jokbo_desc"><strong>백스트레이트 플러쉬</strong>란 5장의 무늬가 같으면서 A, 2, 3, 4, 5가 연달아 있는 족보를 말합니다.</p>
+          <p class="jokbo_desc">한게임포커에서는 두번째로 높은 족보입니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">스트레이트 플러쉬 <span class="txt_wrap">Straight flush</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_3.png" width="231" alt="한게임포커 스트레이트 플러쉬">
+          </figure>
+          <p class="jokbo_desc"><strong>스트레이트 플러쉬</strong>란 5장의 무늬가 같으며 연속된 숫자 5장으로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc"><strong>스티플</strong>이라고 축약해서 부르기도 합니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+        <h3 class="jokbo_title">포카드 <span class="txt_wrap">Four of a kind, Quads</span></h3>
+        <figure class="jokbo_img">
+          <img src="img/guide/img_jokbo_poker_4.png" width="231" alt="한게임포커 포카드">
+        </figure>
+        <p class="jokbo_desc"><strong>포카드</strong>란 AAAA, 3333 등 동일한 숫자 4장으로 이루어진 족보를 말합니다.</p>
+        <p class="jokbo_desc">두 명 이상의 유저가 서로 포카드를 잡았을 경우 4장 카드의 숫자를 비교하여 승자를 정하며, 동일한 숫자의 이름을 붙여 A포카, 3포카로 부릅니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">풀하우스 <span class="txt_wrap">Full house</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_5.png" width="231" alt="한게임포커 풀하우스">
+          </figure>
+          <p class="jokbo_desc"><strong>풀하우스</strong>란 3장의 동일한 숫자(트리플)와 2장의 동일한 숫자(원 페어)로 이루어진 족보입니다.</p>
+          <p class="jokbo_desc">풀하우스는 3장의 동일한 숫자의 이름을 붙여 부르는데, 예를 들어, ‘7-7-7-9-9’라면 7 풀하우스, ‘6-6-6-3-3’이라면 6 풀하우스라고 합니다.</p>
+          <p class="jokbo_desc">두 명 이상의 유저에게 풀하우스가 나올 경우, 3장 있는 카드의 숫자가 높은 풀하우스가 이기게 됩니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">플러쉬 <span class="txt_wrap">Flush</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_6.png" width="231" alt="한게임포커 플러쉬">
+          </figure>
+          <p class="jokbo_desc"><a href="javascript:;" target="_blank" rel="noreferrer noopener" class="txt_link">플러쉬</a>란 숫자와는 관계없이, 5장의 무늬가 같은 카드로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">플러쉬 족보를 잡은 유저가 2명 이상일 경우 가장 높은 숫자부터 순차적으로 비교합니다.</p>
+          <p class="jokbo_desc">숫자까지 모두 같다면 가장 높은 숫자의 무늬(♠>◆>♥>♣)를 비교하여 승자를 정합니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">마운틴 <span class="txt_wrap">Mountain</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_7.png" width="231" alt="한게임포커 마운틴">
+          </figure>
+          <p class="jokbo_desc"><strong>마운틴</strong>이란 모든 무늬가 같지는 않고 10, J, Q, K, A가 연달아 있는 족보를 말합니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">백 스트레이트 <span class="txt_wrap">Back Straight</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_8.png" width="231" alt="한게임포커 백 스트레이트">
+          </figure>
+          <p class="jokbo_desc"><strong>백 스트레이트</strong>란 모든 무늬가 같지는 않고 A, 2, 3, 4, 5가 연달아 있는 족보를 말합니다.</p>
+          <p class="jokbo_desc">2명 이상의 유저가 스트레이트 족보일 때에는 가장 큰 숫자의 무늬를 비교하여 승부를 결정하지만 백 스트레이트 족보의 경우에는 A카드의 무늬(♠>◆>♥>♣)로 결정합니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">스트레이트 <span class="txt_wrap">Straight</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_9.png" width="231" alt="한게임포커 스트레이트">
+          </figure>
+          <p class="jokbo_desc"><strong>스트레이트</strong>란 무늬에 상관없이 연속된 숫자 5장으로 이루어진 족보를 말합니다. 반드시 5장의 카드가 같은 무늬일 필요는 없으며 숫자만 연속적이면 가능한 조합입니다.</p>
+          <p class="jokbo_desc">5장 중 가장 높은 카드로 결정하며, 탑이 같을 경우 마찬가지로 탑 카드의 무늬 서열로 결정합니다.</p>
+          <p class="jokbo_desc">J-Q-K-A-2와 같이 A가 중간에 낀 경우는 스트레이트로 인정되지 않습니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">트리플 <span class="txt_wrap">Triple</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_10.png" width="231" alt="한게임포커 트리플">
+          </figure>
+          <p class="jokbo_desc"><strong>트리플</strong>이란 동일한 숫자 3장으로 이루어진 족보를 말합니다. 이 때, 나머지 2장의 카드는 페어가 아니어야 하고, 2장의 카드가 페어라면 풀하우스가 됩니다.</p>
+          <p class="jokbo_desc">서로 트리플이 나올 경우, 높은 숫자의 트리플이 이깁니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">투 페어 <span class="txt_wrap">Two pair</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_11.png" width="231" alt="한게임포커 투 페어">
+          </figure>
+          <p class="jokbo_desc"><strong>투 페어</strong>란 동일한 숫자 2장이 2쌍으로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">서로 투 페어일 경우, 높은 쪽 페어 중 숫자가 큰 쪽이 이깁니다. 높은 쪽 페어도 같다면, 나머지 페어도 숫자가 큰 쪽이 이깁니다. 완전히 일치하는 투 페어일 경우, 마지막 5번째 카드가 높은 쪽이 이깁니다. 5번째 카드까지 일치할 경우 높은 페어의 무늬로 결정합니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">원 페어 <span class="txt_wrap">One pair</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_12.png" width="231" alt="한게임포커 원 페어">
+          </figure>
+          <p class="jokbo_desc"><strong>원 페어</strong>란 동일한 숫자 2장이 1쌍으로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">서로 원 페어일 경우, 높은 페어가 이기며 같은 페어라면 나머지 카드의 탑으로 결정합니다. 마지막 5번째 카드까지 일치할 경우 투 페어와 마찬가지로 페어의 무늬로 승패를 결정합니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">하이 카드 High card<span class="txt_wrap">/ 노 페어 No pair</span></h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_poker_13.png" width="231" alt="한게임포커 노 페어">
+          </figure>
+          <p class="jokbo_desc"><strong>하이 카드/노 페어</strong>란 위의 9개의 족보에 해당되지 않는 경우를 말합니다.</p>
+          <p class="jokbo_desc">제일 높은 숫자 순서대로 승자를 정합니다.</p>
+          <p class="jokbo_desc">위와 같은 족보로 5~7장으로 시작해 5장의 카드의 조합으로 족보가 이루어지는 포커에서 사용할 수 있습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 포커 족보 (로우바둑이) -->
+    <section class="section" id="section3">
+      <h2 class="title level_2">포커 족보<span class="title_sub">로우바둑이</span></h2>
+      <p class="desc">
+        로우바둑이 포커 족보는 기본 포커 족보와 <strong>전혀 다른 체계</strong>를 이루고 있습니다. 로우바둑이는 4장의 카드로 진행되며 <strong>무늬의 서열을 따지지 않습니다.</strong><br>
+        로우바둑이 에서는 기본적으로 4장의 <strong>무늬가 모두 다른 상황에서 그 중 제일 큰 숫자가 작으면 작을수록 좋은 족보</strong>입니다.<br>
+        승패는 메이드 > 베이스 > 투베이스 순으로 정해지며, 같은 종류의 족보가 나올 경우, 가장 높은 숫자부터 차례로 비교해 낮은 숫자를 가진 쪽이 승리하게 됩니다.<br>
+        카드의 족보는 높은 족보부터 낮은 족보 순으로 설명하겠습니다.
+      </p>
+
+      <ul class="jokbo_box">
+        <li class="jokbo_itm">
+          <h3 class="jokbo_title">메이드</h3>
+          <p class="jokbo_desc"><strong>메이드</strong>는 카드 4장의 무늬와 숫자가 모두 다른 족보로, 로우바둑이 족보에서 가장 높은 족보입니다.</p>
+          <p class="jokbo_desc">가장 좋은 족보 3가지를 순서대로 골프, 세컨드, 써드라고 합니다.</p>
+        </li>
+        <li class="jokbo_itm">
+          <h4 class="jokbo_title">골프</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lowbaduki_1.png" width="184" alt="로우바둑이 골프">
+          </figure>
+          <p class="jokbo_desc"><strong>골프</strong>란 무늬가 모두 다르면서 A, 2, 3, 4로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">로우바둑이에서 가장 높은 족보입니다.</p>
+        </li>
+        <li class="jokbo_itm">
+          <h4 class="jokbo_title">세컨드</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lowbaduki_2.png" width="184" alt="로우바둑이 세컨드">
+          </figure>
+          <p class="jokbo_desc"><strong>세컨드</strong>란 무늬가 모두 다르면서 A, 2, 3, 5로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">두번째로 높은 족보입니다.</p>
+        </li>
+        <li class="jokbo_itm">
+          <h4 class="jokbo_title">써드</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lowbaduki_3.png" width="184" alt="로우바둑이 써드">
+          </figure>
+          <p class="jokbo_desc"><strong>써드</strong>는 무늬가 모두 다르면서 A, 2, 4, 5로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">세번째로 높은 족보입니다.</p>
+        </li>
+        <li class="jokbo_itm">
+          <h4 class="jokbo_title">기타 메이드</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lowbaduki_4.png" width="184" alt="로우바둑이 기타 메이드">
+          </figure>
+          <p class="jokbo_desc">골프, 세컨드, 써드를 제외한 기타 메이드 족보는 가장 높은 숫자인 탑 숫자에 따라 5탑~K탑 순으로 우열이 정해집니다.</p>
+          <p class="jokbo_desc">로우바둑이에서는 메이드 족보의 탑 숫자 대결로 승부가 결정되는 경우가 많습니다. </p>
+        </li>
+      </ul>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">베이스</h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lowbaduki_5_1.png" width="184" alt="로우바둑이 숫자 중복 베이스">
+            <figcaption>숫자가 중복되는 경우</figcaption>
+          </figure>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lowbaduki_5_2.png" width="184" alt="로우바둑이 무늬 중복 베이스">
+            <figcaption>무늬가 중복되는 경우</figcaption>
+          </figure>
+          <p class="jokbo_desc">베이스란 3장의 카드에 새겨져 있는 무늬와 숫자는 모두 다르지만, 나머지 한 장의 카드가 다른 세 카드의 무늬 또는 숫자와 겹치는 족보를 말합니다.</p>
+          <p class="jokbo_desc">숫자가 겹치는 경우는 로우바둑이에서는 무늬의 우열을 가리지 않기 때문에 다른 베이스와 우열을 가릴 때 상관이 없으나,</p>
+          <p class="jokbo_desc">무늬가 겹치는 경우는 두 카드 중 숫자가 큰 것을 제외하고 나머지 3장의 카드로 상대방의 베이스와 우열을 가리게 됩니다.</p>
+          <p class="jokbo_desc">우열을 가릴 수 없는 경우 우승자가 여러 명이 되어 판돈을 나누어 갖습니다.</p>
+        </div>
+      </div>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h3 class="jokbo_title">투베이스</h3>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lowbaduki_6.png" width="184" alt="로우바둑이 투 베이스">
+          </figure>
+          <p class="jokbo_desc">투베이스란 4장의 카드가 두 가지 종류의 무늬나 두 가지 종류의 숫자로만 이루어져 있는 족보를 말합니다.</p>
+          <p class="jokbo_desc">서로 투베이스가 나올 경우, 서로 다른 무늬가 되면서 최소의 숫자인 두 장의 카드를 뽑아서 비교하게 됩니다.</p>
+          <p class="jokbo_desc">위 경우는 무늬가 ♣와 ◆의 두 종류 밖에 없고 ◆중에서 가장 작은 숫자가 7이므로 ♣ 4 ◆ 7 투베이스가 되어 다른 투베이스와 우열을 가립니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섯다 족보 (LA섯다) -->
+    <section class="section" id="section4">
+      <h2 class="title level_2">섯다 족보<span class="title_sub">LA 섯다</span></h2>
+      <p class="desc">
+        LA섯다는 A, 2~10의 숫자를 가진 스페이드와 다이아몬드 카드 총 20장으로 게임을 진행합니다. 널리 알려진 섯다 족보와 동일하며, 스페이드A, 3, 8은 화투의 광(光)과 같은 역할을 합니다.<br>
+        카드의 족보는 높은 족보부터 낮은 족보 순으로 설명하겠습니다.
+      </p>
+
+      <h3 class="title level_3">LA섯다 일반 족보</h3>
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">삼팔광땡</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_1.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc"><strong>삼팔광땡</strong>이란 스페이드 3과 스페이드8로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">모든 족보에 승리하는 최강의 족보입니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">일팔광땡</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_2.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc"><strong>일팔광땡</strong>이란 스페이드 A와 스페이드8로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">일삼광땡에 승리합니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">일삼광땡</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_3.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc"><strong>일삼광땡</strong>이란 스페이드 A와 스페이드3으로 이루어진 족보를 말합니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">장땡 ~ 1땡</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_4.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc"><strong>땡</strong>이란 2개의 같은 숫자 카드로 이루어진 족보를 말합니다. A부터 10까지의 숫자의 조합이며 숫자가 클수록 높은 족보입니다.</p>
+          <p class="jokbo_desc">각각 1땡, 2땡~으로 땡 앞에 숫자를 붙이며 10 카드만 장땡이라고 부릅니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">알리</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_5.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">무늬에 관계 없이 A와 2로 이루어진 족보를 말합니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">독사</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_6.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">무늬에 관계 없이 A와 4로 이루어진 족보를 말합니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">구삥</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_7.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">무늬에 관계 없이 9와 A로 이루어진 족보를 말합니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">장삥</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_8.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">무늬에 관계 없이 10과 A로 이루어진 족보를 말합니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">장사</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_9.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">무늬에 관계 없이 10과 4로 이루어진 족보를 말합니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">세륙</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_10.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">무늬에 관계 없이 4와 6으로 이루어진 족보를 말합니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">갑오</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_11.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">무늬에 관계 없이 카드 숫자의 합이 9인 족보를 말합니다.</p>
+          <p class="jokbo_desc">합이 10을 초과하면 일의 자리만 유효합니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">8끗 ~ 1끗</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_12.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">무늬에 관계 없이 카드 숫자의 합이 8~1인 족보를 말합니다.</p>
+          <p class="jokbo_desc">역시 합이 10을 초과하면 일의 자리만 유효합니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">망통</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_13.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">무늬에 관계 없이 숫자의 합이 10인 족보를 말합니다.</p>
+        </div>
+      </div>
+
+      <h3 class="title level_3">LA섯다 특수 족보</h3>
+      <p class="desc">특수 족보는 특정 조건을 만족해야 발동하며,그렇지 않으면 끗 또는 망통으로 처리되는 족보입니다.</p>
+
+      <div class="jokbo_box">
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">멍텅구리 구사</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_14.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">스페이드 9와 스페이드 4로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">가장 높은 상대 족보가 9땡 이하이면 재경기를 진행하며, 멍구사로도 불립니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">구사</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_15.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">멍텅구리 구사를 제외한 나머지 9와 4로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">가장 높은 상대 족보가 알리 이하라면 재경기를 진행합니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">37땡잡이</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_16.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">스페이드 3과 스페이드 7로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">9땡~1땡과의 대결에서 승리하며, 상대 중 땡이 없다면 망통으로 처리됩니다.</p>
+        </div>
+        <div class="jokbo_itm">
+          <h4 class="jokbo_title">47암행어사</h4>
+          <figure class="jokbo_img">
+            <img src="img/guide/img_jokbo_lasudda_17.png" width="90" alt="">
+          </figure>
+          <p class="jokbo_desc">스페이드 4와 스페이드 7로 이루어진 족보를 말합니다.</p>
+          <p class="jokbo_desc">일팔광땡/일삼광땡과의 대결에서 승리하며, 상대 중 광땡이 없으면 1끗으로 처리됩니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="desc">
+        지금까지 7포커, 로우바둑이, 하이로우, 라스베가스 홀덤, 맞포커, LA섯다 포커 족보에 대해 알아보았습니다. 포커 플레이 시 족보를 잘 몰라 어려움을 겪고 계셨다면, 위의 포커 족보를 숙지하여 플레이 해 보시길 바랍니다.<br>
+        실제로 다른 이용자들과 포커 게임을 플레이하고 싶다면?
+        <strong class="txt_underline">PC에서 <a href="https://poker.hangame.com/" target="_blank" rel="noreferrer noopener" class="txt_link">한게임포커</a>에 접속(poker.hangame.com)</strong> 해보시거나
+        <a href="javascript:;" target="_blank" rel="noreferrer noopener" class="txt_link">모바일 한게임포커 클래식</a>에 지금 접속하세요!
+      </p>
+    </section>
+
+    <!-- [D] Top 버튼 -->
+    <a href="#wrap" class="btn_top ico arrow_top" role="button" style="display:none;"><span class="blind">맨 위로</span></a>
+  </main>
+
+  <!-- [D] footer -->
+  <?php include 'include/footer.html'?>
+
+</div>
+
+<!-- [D] case view / [D] 마크업 확인용, 개발 시 삭제 부탁드립니다. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</body>
+</html>

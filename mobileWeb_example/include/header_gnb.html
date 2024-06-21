@@ -1,0 +1,105 @@
+<header id="header" class="header">
+
+	<!-- [D] 헤더 영역 -->
+	<div class="top_wrap">
+		<h1><a href="./00_main.html" class="top_logo" aria-label="한게임포커"></a></h1>
+		<div class="top_menu">
+			<button type="button" class="menu_btn ico add_shortcut" aria-label="즐겨찾기 추가"></button>
+			<button type="button" class="menu_btn btn_gnb ico menu" aria-label="메뉴 열기"></button>
+		</div>
+	</div>
+
+	<!-- [D] GNB 노출 시 .gnb에 is_show 클래스 추가 -->
+	<nav id="gnb" class="gnb" style="display:none;">
+
+		<!-- [D] 헤더 영역 -->
+		<div class="top_wrap">
+			<a href="./00_main.html" class="top_logo" aria-label="한게임포커"></a>
+			<div class="top_menu">
+				<button type="button" class="menu_btn ico add_shortcut" aria-label="즐겨찾기 추가"></button>
+				<button type="button" class="menu_btn btn_gnb ico close" aria-label="메뉴 닫기"></button>
+			</div>
+		</div>
+
+		<!-- [D] 회원 정보 영역 -->
+		<div class="member_data_wrap">
+
+			<!-- [D] 로그인 전 -->
+			<div class="member_data_area" style="display:none;">
+				<p class="txt_notice">
+					<a href="javascript:;" class="link_login">로그인</a> 후 이용해주세요.
+				</p>
+			</div>
+
+			<!-- [D] 로그인 후 -->
+			<div class="member_data_area" style="display:block;">
+				<div class="info_box">
+					<div class="nickname" role="text">
+						<span class="img"><img src="img/img_pokerplus_z.png" alt="Z-Plus 회원제"></span>
+						<span class="txt">가나다라마바사1</span>
+						<span class="unit">님</span>
+					</div>
+					<!-- [D] .vip 타입별로 1개만 노출 -->
+					<div class="vip vip_premium">프리미엄 클래스</div>
+					<div class="vip vip_first" style="display:none;">퍼스트 클래스</div>
+					<div class="vip vip_business" style="display:none;">비즈니스 클래스</div>
+				</div>
+				<div class="money_box">
+					<div class="money_row">
+						<div class="title">포커머니</div>
+						<div class="desc" role="text"><span class="num">0000조 0000억 0000만 0000</span><span class="unit">블루</span></div>
+					</div>
+					<div class="money_row hancoin">
+						<div class="title">한코인</div>
+						<div class="desc" role="text"><span class="num">112,345,000</span><span class="unit">원</span></div>
+						<button type="button" class="btn btn_charge btn_point"><span class="txt">충전</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- [D] 전체 메뉴 영역 -->
+		<div class="menu_wrap">
+			<div class="menu_divide"><span class="txt">포커상점</span></div>
+			<ul class="menu_lst">
+				<li class="menu_itm"><a href="./01_shop_plus_only_avatar.html" class="link"><span class="txt">Plus전용아바타</span></a></li>
+				<li class="menu_itm"><a href="./01_shop_money_avatar.html" class="link"><span class="txt">머니아바타</span></a></li>
+			</ul>
+			<div class="menu_divide"><span class="txt">게임방법</span></div>
+			<ul class="menu_lst">
+				<li class="menu_itm"><a href="./02_guide_jokbo.html" class="link"><span class="txt">포커 족보</span></a></li>
+				<li class="menu_itm"><a href="./02_guide_rule.html" class="link"><span class="txt">포커 게임 방법과 규칙</span></a></li>
+				<li class="menu_itm"><a href="./02_guide_strategy.html" class="link"><span class="txt">포커 게임 전략</span></a></li>
+			</ul>
+			<div class="menu_divide"><span class="txt">한게임PC방</span></div>
+			<div class="menu_lst">
+				<li class="menu_itm"><a href="./03_pcbang_benefit.html" class="link"><span class="txt">한게임PC방 혜택</span></a></li>
+				<li class="menu_itm"><a href="javascript:;" class="link"><span class="txt">한게임PC방 찾기</span></a></li>
+			</div>
+			<div class="menu_divide"></div>
+			<ul class="menu_lst hangame">
+				<li class="menu_itm"><a href="javascript:;" class="link"><span class="txt">한게임 홈</span></span></a></li>
+				<li class="menu_itm"><a href="javascript:;" class="link"><span class="txt">내 결제내역</span></span></a></li>
+				<li class="menu_itm"><a href="javascript:;" class="link"><span class="txt">고객센터</span></span></a></li>
+			</ul>
+			<div class="menu_divide"></div>
+			<ul class="menu_lst">
+				<li class="menu_itm"><a href="javascript:;" class="link">
+					<span class="img"><img src="img/img_thumb_hangamepoker.png" alt=""></span>
+					<span class="txt">한게임 포커 클래식 바로가기</span></a>
+				</li>
+			</ul>
+		</div>
+		<div class="bottom_wrap">
+			<div class="btn_lst">
+				<div class="btn_itm login" style="display:none;"><a href="javascript:;" class="btn btn_login btn_point2">로그인</a></div>
+				<div class="btn_itm logout" style="display:block;"><a href="javascript:;" class="btn btn_logout">로그아웃</a></div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- [D] dimmed -->
+	<div class="dimmed" style="display:none;"></div>
+
+</header>
+

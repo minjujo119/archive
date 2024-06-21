@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="대한민국 대표 온라인 포커 게임사이트 한게임 포커에서 다양한 카드게임을 즐겨보세요!">
+<title>한게임포커 - 대한민국 대표 포커 게임 사이트</title>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<!-- [D] body에 .scroll_lock 클래스 추가 시 스크롤 제한 -->
+<body>
+<!-- [D] 전페이지 공통 건너뛰기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+
+<!-- [D] wrap -->
+<div id="wrap" class="wrap">
+
+	<!-- [D] header & gnb -->
+  <?php include 'include/header_gnb.html'?>
+
+  <!-- [D] main -->
+  <main id="content" class="content content_main">
+    <!-- [D] 메인 배너 영역 -->
+    <div class="main_banner">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <a href="javascript:;" class="swiper-slide"><img src="img/banner_main.png" alt=""></a>
+          <a href="javascript:;" class="swiper-slide"><img src="img/banner_main.png" alt=""></a>
+          <a href="javascript:;" class="swiper-slide"><img src="img/banner_main.png" alt=""></a>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev ico chevron_wh_l"><span class="blind">이전 슬라이드 보기</span></div>
+        <div class="swiper-button-next ico chevron_wh_r"><span class="blind">다음 슬라이드 보기</span></div>
+      </div>
+    </div>
+
+    <!-- [D] LNB 영역 -->
+    <div class="lnb">
+      <ul class="lnb_lst">
+        <li class="lnb_itm">
+          <a href="./01_shop_plus_only_avatar.html" class="lnb_link">
+            <span class="img"><img src="img/img_menu_shop.png" alt=""></span>
+            <h2 class="txt">포커상점</h2>
+          </a>
+        </li>
+        <li class="lnb_itm">
+          <a href="./02_guide_jokbo.html" class="lnb_link">
+            <span class="img"><img src="img/img_menu_guide.png" alt=""></span>
+            <h2 class="txt">게임방법</h2>
+          </a>
+        </li>
+        <li class="lnb_itm">
+          <a href="javascript:;" class="lnb_link">
+            <span class="img"><img src="img/img_menu_pcbang.png" alt=""></span>
+            <h2 class="txt">PC방 찾기</h2>
+          </a>
+        </li>
+        <li class="lnb_itm">
+          <a href="javascript:;" class="lnb_link">
+            <span class="img"><img src="img/img_thumb_hangamepoker.png" alt=""></span>
+            <h2 class="txt">앱 다운로드</h2>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- [D] 내가 자주 구매한 상품 -->
+    <section class="section section_frequency">
+      <div class="title_wrap">
+        <h2 class="title">내가 자주 구매한 상품</h2>
+      </div>
+
+      <!-- [D] product_lst에 .is_fold 추가 시 .product_lst 접힘 -->
+      <ul class="product_lst is_fold">
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm new">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">승리의 가위!바위!보!</em>
+            <span class="product_desc">승리시 최대 500억</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm best">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm hit">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm no1">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- [D] .product_lst 상태에 따라 .btn_fold 1개만 노출 (display:flex) -->
+      <div class="btn_wrap">
+        <button type="button" class="btn btn_fold btn_white" style="display:flex;">
+          <span class="txt">모두 보기</span><span class="ico chevron_bl_d"></span>
+        </button>
+        <button type="button" class="btn btn_fold btn_white" style="display:none;">
+          <span class="txt">접기</span><span class="ico chevron_bl_u"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- [D] 추천 상품 -->
+    <section class="section">
+      <div class="title_wrap">
+        <h2 class="title">추천 상품</h2>
+      </div>
+      <ul class="product_lst">
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">승리의 가위!바위!보!</em>
+            <span class="product_desc">승리시 최대 500억</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- [D] 중간 배너 -->
+    <div class="section">
+      <div class="sub_banner">
+        <a href="javascript:;" class="banner_itm">
+          <img src="img/@tmp_banner_sub.png" alt="Z+ 유저 전용 패키지! 로얄패키지 10% 할인">
+        </a>
+      </div>
+    </div>
+
+    <!-- [D] BEST 상품 -->
+    <section class="section">
+      <div class="title_wrap">
+        <h2 class="title">BEST 상품</h2>
+      </div>
+      <ul class="product_lst">
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">승리의 가위!바위!보!</em>
+            <span class="product_desc">승리시 최대 500억</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <!-- [D] .product_itm 상품뱃지 노출 시 hit, no1, best, new 클래스 추가 -->
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail.png" alt=""></div>
+          <div class="product_cont">
+            <em class="product_name">피로회복제30000</em>
+            <span class="product_desc">16.5억 골드/1회, 8.25억 골드/ 2회 중 선택</span>
+            <div class="product_btn">
+              <a href="javascript:;" class="btn btn_buy btn_point">
+                <span class="price">100,000원</span><span class="txt">구매</span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="btn_wrap">
+        <a href="./01_shop_plus_only_avatar.html" class="btn btn_white">
+          <span class="txt">더 많은 상품 보기</span><span class="ico chevron_bl_r"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- [D] 중간 배너 -->
+    <div class="section">
+      <div class="sub_banner">
+        <a href="javascript:;" class="banner_itm">
+          <img src="img/@tmp_banner_sub.png" alt="Z+ 유저 전용 패키지! 로얄패키지 10% 할인">
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- [D] 바텀시트 영역 -->
+  <?php include 'include/bottom_sheet.html'?>
+
+  <!-- [D] footer -->
+  <?php include 'include/footer.html'?>
+
+</div>
+
+<!-- [D] case view / [D] 마크업 확인용, 개발 시 삭제 부탁드립니다. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+<script src="js/scroll-lock.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<style>
+.caseview_wrap{position:fixed;bottom:3px;right:3px;z-index:9999999999999;min-width:130px;background-color:rgba(0,0,0,0.7);text-align:left;font-size:12px;line-height:14px}
+.caseview_lst{overflow-y:auto;width:100%;min-height:80px;max-height:425px;padding:7px}.caseview_lst::-webkit-scrollbar{width:8px}.caseview_lst::-webkit-scrollbar-track{background:transparent}.caseview_lst::-webkit-scrollbar-thumb {border-radius:20px;background:rgba(255,255,255,0.4)}
+.caseview_btn{display:block;min-width:150px;padding:4px 6px;margin-left:5px;color:#fff;font-size:12px;text-align:left;text-decoration:none;background-color:transparent;border:0;cursor:pointer;box-sizing:border-box}.caseview_btn:hover{background-color:rgba(299,299,299,0.2)}
+.caseview_tit{display:block;padding:6px;font-size:13px;color:#ffd700}.caseview_btn_toggle{display:block;min-width:150px;padding:6px;background:#ffd700;color:#000;text-align:center;font-size:13px;font-weight:bold;cursor:pointer}
+</style>
+<div class="caseview_wrap">
+<span class="caseview_btn_toggle" onclick="$(this).next().toggle();">케이스뷰</span>
+<div class="caseview_lst" style="display:none;">
+<span class="caseview_tit">[GNB 영역]</span>
+<button class="caseview_btn" data-id="gnbToggle">GNB 열림/닫힘</button>
+<button class="caseview_btn" data-id="gnbLogin">로그인 전/후</button>
+<span class="caseview_tit">[내가 자주 구매한 상품]</span>
+<button class="caseview_btn" data-id="frequencyFold">모두 보기 / 접기</button>
+<button class="caseview_btn" data-id="frequencyHide">구매한 상품 없는 경우</button>
+<span class="caseview_tit">[바텀시트 영역]</span>
+<button class="caseview_btn" data-id="bottomSheetLoginBefore">로그인 전</button>
+<button class="caseview_btn" data-id="bottomSheetLoginAfter">로그인 후</button>
+<button class="caseview_btn" data-id="bottomSheetToggle">바텀시트 up/down</button>
+<button class="caseview_btn" data-id="userPlusChange">Plus 회원제 변경 (4개)</button>
+<button class="caseview_btn" data-id="userVipChange">VIP 클래스 변경 (3개)</button>
+<button class="caseview_btn" data-id="userNone">회원제 / VIP 미가입</button>
+</div>
+</div>
+<script>
+$(function () {
+
+  let plusImgArrayIndex = -1;
+  let vipArrayIndex = -1;
+
+  $('.caseview_btn').on("click",function(){
+    let caseID = $(this).attr('data-id');
+    $('.layer_wrap').hide();
+    
+    switch(caseID){
+
+      case "gnbToggle":
+      const isGnbShow = $('.gnb').hasClass('is_show');
+      isGnbShow ? gnbHide() : gnbShow();
+      break;
+
+      case "gnbLogin":
+      $('.gnb .member_data_area').toggle();
+      $('.gnb .bottom_wrap .btn_itm').toggle();
+      break;
+      
+      case "bottomSheetLoginBefore":
+      $('.bottom_sheet .member_data_area').hide();
+      $('.bottom_sheet .member_data_area').eq(0).show();
+      $('.bottom_sheet_wrap').removeClass('is_up');
+      break;
+
+      case "bottomSheetLoginAfter":
+      $('.bottom_sheet .member_data_area').hide();
+      $('.bottom_sheet .member_data_area').eq(1).show();
+      break;
+
+      case "bottomSheetToggle":
+      bottomSheetMove();
+      break;
+
+      case "frequencyFold":
+      $('.section_frequency .product_lst').toggleClass('is_fold');
+      $('.section_frequency .btn_fold').toggle();
+      break;
+
+      case "frequencyHide":
+      $('.section_frequency').remove();
+      break;
+
+      case "userPlusChange":
+      const plusImg = $('.member_data_area .nickname .img');    
+      const plusImgArray = [
+        '<img src="img/img_pokerplus_v.png" alt="V-Plus 회원제">',
+        '<img src="img/img_pokerplus_w.png" alt="W-Plus 회원제">',
+        '<img src="img/img_pokerplus_x.png" alt="X-Plus 회원제">',
+        '<img src="img/img_pokerplus_z.png" alt="Z-Plus 회원제">',
+      ]
+      plusImgArrayIndex++;
+      if (plusImgArrayIndex === 4) plusImgArrayIndex = 0;
+      plusImg.html(plusImgArray[plusImgArrayIndex]);
+      break;
+
+      case "userVipChange":
+      const vip = $('.member_data_area .vip');
+      const vipArray = [
+        '.member_data_area .vip_first',
+        '.member_data_area .vip_business',
+        '.member_data_area .vip_premium'
+      ];
+      vipArrayIndex++;
+      if (vipArrayIndex === 3) vipArrayIndex = 0;
+      vip.hide();
+      $(vipArray[vipArrayIndex]).show();
+      break;
+
+      case "userNone":
+      $('.bottom_sheet .nickname .img').hide();
+      $('.bottom_sheet .vip').hide();
+      break;
+
+    };
+  });
+  // 메인 배너 슬라이드
+  const swiper_mainbanner = new Swiper('.main_banner .swiper-container', {
+    breakpoints: {
+      768:{
+        slidesPerView: '1.41',
+        spaceBetween: 16,
+        navigation: { enabled: true }
+      },
+      1024:{
+        slidesPerView: 'auto',
+        spaceBetween: 27,
+        navigation: { enabled: true }
+      }
+    },
+    centeredSlides: true,
+    loop: true,
+    loopedSildes :1,
+    observer: true,
+    observeParents: true,
+    watchOverflow: true, 
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${className}">${index + 1}</span>`
+      },
+    },
+    navigation: {
+      enabled: false,
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      clickable: true,
+    },
+  });
+});
+
+</script>
+<!-- [D] // case view / [D] 마크업 확인용, 개발 시 삭제 부탁드립니다. -->
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="머니 혜택은 4배 UP! 아이템 무료지급! 한게임 가맹 PC방 혜택을 확인해 보세요!">
+<title>한게임 PC방 혜택 | 한게임포커</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<!-- [D] body에 .scroll_lock 클래스 추가 시 스크롤 제한 -->
+<body>
+<!-- [D] 전페이지 공통 건너뛰기 링크 제공 -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">주 메뉴 바로가기</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">본문 바로가기</a></li>
+</ul>
+
+<!-- [D] wrap -->
+<div id="wrap" class="wrap">
+
+	<!-- [D] header & gnb -->
+  <?php include 'include/header_gnb.html'?>
+
+  <!-- [D] content -->
+  <main id="content" class="content content_sub pcbang">
+
+    <!-- [D] LNB 영역 : lnb 스크롤 고정 시 is_fixed 클래스 추가 -->
+    <div class="lnb">
+      <ul class="lnb_lst">
+        <li class="lnb_itm is_selected">
+          <h1><a href="./03_pcbang_benefit.html" class="lnb_link"><span class="txt">한게임 PC방 혜택</span></a></h1>
+        </li>
+        <li class="lnb_itm">
+          <a href="javascript:;" class="lnb_link"><span class="txt">한게임 PC방 찾기</span></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <ul class="product_lst type_flex">
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail3.png" alt=""></div>
+          <div class="product_cont">
+            <h2 class="product_name">PC방 캡슐뽑기 티켓 매일 최대 100개 제공</h2>
+            <span class="product_desc">1판만 플레이해도 무료티켓 3개 지급<br>1회 최대 100억 골드!</span>
+          </div>
+        </li>
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail4.png" alt=""></div>
+          <div class="product_cont">
+            <h2 class="product_name">자동 충전 금액 600만 골드 제공</h2>
+            <span class="product_desc">50만 골드 X 12회</span>
+          </div>
+        </li>
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail5.png" alt=""></div>
+          <div class="product_cont">
+            <h2 class="product_name">포커 슈퍼방장 지급</h2>
+            <span class="product_desc">방 만들기 옵션을 내 마음대로!</span>
+          </div>
+        </li>
+        <li class="product_itm">
+          <div class="product_thum"><img src="img/@tmp_product_thumbnail6.png" alt=""></div>
+          <div class="product_cont">
+            <h2 class="product_name">한게임카지노 칩 보너스 50% 추가 지급<br>자동충전 600만 칩 제공</h2>
+            <span class="product_desc">30만 칩 X 20회</span>
+          </div>
+        </li>
+      </ul>
+      <!-- [D] .product_lst 상태에 따라 .btn_fold 1개만 노출 -->
+      <div class="btn_wrap">
+        <a href="javascript:;" class="btn btn_point2" style="display:flex;">
+          <span class="txt">한게임 PC방 찾기</span>
+        </a>
+      </div>
+    </div>    
+  </main>
+
+  <!-- [D] 바텀시트 영역 -->
+  <?php include 'include/bottom_sheet.html'?>
+
+  <!-- [D] footer -->
+  <?php include 'include/footer.html'?>
+
+</div>
+
+<!-- [D] case view / [D] 마크업 확인용, 개발 시 삭제 부탁드립니다. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.slim.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
