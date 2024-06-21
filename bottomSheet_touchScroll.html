@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.min.css" integrity="sha512-gCJkkUMGTe73+FMwog6gIBCVJIMXRoc21l6/IPCuzxCex/1sxvO8ctb6Zd4/WWs2UMqmtnDrAdhJht5pEY0LXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+</head>
+<body>
+
+<style>
+.wrap{
+  position:relative;
+  width:100%;
+  min-height:200vh;
+  margin:0 auto;
+  background-color:#ddd;
+  box-sizing:border-box;
+}
+.bottom_sheet{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:208px;
+  transform:translateY(124px);
+  transition:0.3s transform;
+  background-color:#fff;
+  border-radius:20px 20px 0 0;
+}
+.bottom_sheet.is_up{
+  transform:translateY(0);
+}
+.bottom_sheet::after{
+  position:absolute;
+  top:12px;
+  left:calc(50% - 14px);
+  width:28px;
+  height:4px;
+  border-radius:2px;
+  background-color:gray;
+  content:'';
+}
+</style>
+
+<div class="wrap">
+  <main>
+    <p>contents</p>
+  </main>
+  <div class="bottom_sheet"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scroll-lock/2.1.5/scroll-lock.min.js"></script>
+<script>
+const bottom = document.querySelector('.bottom_sheet');
+let startTime;
+let endTime;
+let yStart;
+let yDelta;
+let bottomTouched = false;
+
+bottom.addEventListener('touchstart', (e) => {
+    bottomTouched = true;
+    startTime = Date.now();
+    yStart = e.touches[0].clientY;
+    scrollLock.disablePageScroll();
+})
+
+bottom.addEventListener('click', (e) => {
+  bottomTouched = false;
+})
+
+document.documentElement.addEventListener('touchend',(e) => {	
+  if (bottomTouched === true) {
+    endTime = Date.now();
+    yDelta = e.changedTouches[0].clientY - yStart;
+    touchTime = endTime - startTime;
+    
+    if (touchTime < 2000 && yDelta > 0) {
+      bottom.classList.remove('is_up');
+    } else if (touchTime < 2000 && yDelta < 0) {
+      bottom.classList.add('is_up');
+    }
+    scrollLock.enablePageScroll();
+  }
+  bottomTouched = false;
+});
+</script>
+
+</body>
+</html>
